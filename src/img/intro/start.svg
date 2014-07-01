@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="180px" height="130px" viewBox="0 0 180 130" xml:space="preserve">
+<g transform="translate(-232,-988)">
+	<text transform="matrix(1 0 0 1 254.7886 1006.9844)" opacity="0.8" fill="#FFFFFF" font-family="'HelveticaNeue-Light'" font-size="25">Tour starten</text>
+
+		<text transform="matrix(1 0 0 1 -292.2119 -8.0146)" opacity="0.8" fill="#FFFFFF" font-family="'HelveticaNeue-Light'" font-size="25">Tour starten</text>
+	<line opacity="0.8" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="53.831" y1="917.979" x2="585.746" y2="917.979"/>
+	<g opacity="0.8">
+		<polyline opacity="0.8" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-miterlimit="10" points="406.166,1014.595
+			319.789,1067.405 233.411,1014.595 		"/>
+		<polyline opacity="0.8" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-miterlimit="10" points="406.166,1038.227
+			319.789,1091.037 233.411,1038.227 		"/>
+		<polyline opacity="0.8" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-miterlimit="10" points="406.166,1061.858
+			319.789,1114.672 233.411,1061.858 		"/>
+	</g>
+</g>
+</svg>
