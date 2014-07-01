@@ -48,3 +48,13 @@
     height: 100%;
     margin: 0 auto;
 }
+
+.intro h1 {
+    position: absolute;
+    color: #FFF;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    top: 4px;
+    margin: 0;
+}

@@ -7,7 +7,9 @@
 }
 
 .spot-title-img {
+    position: absolute;
     width: 100%;
+    top: 0;
     height: 65%;
     background-repeat: no-repeat;
     background-position: center center;
@@ -37,8 +39,10 @@
 }
 
 .spot-teaser {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
     height: 50%;
-    margin-top: -15%;
     padding: 14px 28px 28px 28px;
     box-sizing: border-box;
     background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 1) 15%, rgba(255, 255, 255, 1) 100%); /* FF3.6+ */
