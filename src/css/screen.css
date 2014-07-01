@@ -1,8 +1,41 @@
-html, body, .app-view, #carousel, #carousel ul, #carousel li {
+@font-face {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Quicksand Regular'), local('Quicksand-Regular'), url('../fonts/quicksand-regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Quicksand Bold'), local('Quicksand-Bold'), url('../fonts/quicksand-bold.woff') format('woff');
+}
+
+html, body, .fullscreen {
     min-height: 100%;
     height: 100%;
     padding: 0;
     margin: 0;
     position: relative;
     font-family: 'Quicksand', sans-serif;
+}
+
+.fullscreen-content {
+    min-height: 100%;
+    height: 100%;
+    max-width: 989px;
+    margin: 0 auto;
+}
+
+.intro {
+    background-color: #1A1A1A;
+}
+
+.intro .fullscreen-content {
+    max-width: 650px;
+    background: url('../img/intro_bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
 }

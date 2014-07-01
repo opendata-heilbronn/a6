@@ -1,7 +1,4 @@
-(function (angular, app) {
+(function (d3, app) {
     'use strict';
 
-    angular.module('app').controller('AnimalListCtrl', function ($scope) {
-        $scope.animals = filterAnimals(app.animals);
-    });
-})(angular, app);
+})(d3, app);

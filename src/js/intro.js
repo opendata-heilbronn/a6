@@ -1,6 +1,3 @@
-(function (angular, app) {
+(function (d3, app) {
     'use strict';
-
-    angular.module('app').controller('IntroCtrl', function ($scope) {
-    });
-})(angular, app);
+})(d3, app);
