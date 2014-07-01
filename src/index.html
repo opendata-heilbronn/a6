@@ -11,6 +11,7 @@
     <link href="http://fonts.googleapis.com/css?family=Arimo" rel="stylesheet"/>
     <link href="css/base.css" rel="stylesheet"/>
     <link href="css/intro.css" rel="stylesheet"/>
+    <link href="css/spots.css" rel="stylesheet"/>
     <!-- endbuild -->
     <title>Bundesautobahn 6 Unfallschwerpunkte</title>
 </head>
@@ -21,24 +22,92 @@
             <img src="img/intro/steinsfurt.svg" alt="Sinsheim-Steinsfurt"/>
             <img src="img/intro/fuerfeld.svg" alt="Fürfeld"/>
             <img src="img/intro/weinsberger_kreuz.svg" alt="Weinsberger Kreuz"/>
-            <img src="img/intro/neckartalstrasse.svg" alt="Neckartalstraße"/>
+            <img src="img/intro/neckartalbruecke.svg" alt="Neckartalstraße"/>
             <img src="img/intro/hohenlohe.svg" alt="Hohenlohe"/>
         </div>
         <div class="intro-start">
-            <img src="img/intro/start.svg"/>
+            <img src="img/intro/start.svg" alt="Tour starten!" class="intro-start-button"/>
         </div>
     </div>
 </div>
-<div id="spot-1" class="fullscreen spot">
-    <h1>Test Spot!</h1>
+<div id="spots" class="fullscreen">
+    <div class="fullscreen-content">
+        <div id="carousel">
+            <ul>
+                <li class="pane1">
+                    <div class="spot-title spot-title-steinsfurt">
+
+                    </div>
+                    <div class="spot-content">
+                        <div class="card">
+                            Auf dem Streckenabschnitt zwischen Weinsberger Kreuz und Öhringen ist kein eindeutiger
+                            Unfallschwerpunkt
+                            zu erkennen. Die Daten zeigen aber: xxx
+                            In den vergangenen Monaten gab es hier aber mehrere schwere Lkw-Unfälle. Die Autobahn war
+                            teilweise
+                            stundenlang gesperrt, die Umleitungsstrecken kollabierten.
+                        </div>
+                        <div class="card">
+                            Zwar herrscht hier weniger Verkehr als bei Neckarsulm. Der Streckenabschnitt weist aber an
+                            der
+                            Zählstelle bei Schwabbach einen extrem hohen Schwerverkehrsanteil (22,6 Prozent) auf.
+                            Mindestens jedes
+                            fünfte Fahrzeug ist ein Lkw. Auf der A81 bei Pleidelsheim ist nur zehnte Fahrzeug ein Lkw.
+                        </div>
+                        <div class="card">
+                            Die Daten zeigen: Wo Lkws an Unfällen beteiligt sind… Schwere Unfälle führen zu
+                            stundenlangen
+                            Streckensperrungen. Der Verkehr muss ausgeleitet werden. Aber die Umleitungsstrecken können
+                            den
+                            A6-Verkehr nicht bewältigen. Die Straßen sind nicht für diesen Verkehr ausgelegt.
+                        </div>
+                    </div>
+                </li>
+                <li class="pane2">
+                    <div class="spot-title spot-title-fuerfeld">
+
+                    </div>
+                    <div class="spot-content">
+                        <div class="card">
+                            Die A6 ist hinter der A8 und der A81 die staureichste Autobahn Baden-Württembergs. Bis zum
+                            25. Juni gab
+                            es laut ADAC im Jahr 2014 3851 Meldungen über Staus oder stockenden Verkehr auf der A6.
+                            Gegenüber dem
+                            Jahr bedeutet dies eine Steigerung von 31%.
+                        </div>
+                        <div class="card">
+                            Noch schlimmer sieht es bei den Staukilometern aus, dort ergibt sich mit 11581 km eine
+                            Steigerungsrate
+                            um ca. 52 % gegenüber dem Vorjahr. Unterstrichen wird dies, durch die extreme Steigerung der
+                            Anzahl der
+                            Staus über 10km Staulänge, 140 Staus ergeben eine Steigerungsrate von ca. 70 %.
+                        </div>
+                        <div class="card">
+                            Besonders betroffen ist der Abschnitt Mannheim – Heilbronn. Auf diesem Abschnitt wurden 3362
+                            Meldungen
+                            gezählt, das sind 38% mehr als im Vorjahr. Für die A6 in Baden-Württemberg bedeutet das,
+                            dass rund 87%
+                            aller Staus auf der A6 zwischen Heilbronn und Mannheim gezählt werden.
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
 </div>
 
 <!-- build:js js/app.min.js -->
 <script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/modernizr/modernizr.js"></script>
 <script src="bower_components/d3/d3.js"></script>
 <script src="bower_components/hammerjs/hammer.js"></script>
 <script src="js/app.js"></script>
 <script src="js/intro.js"></script>
-<script src="js/spot.js"></script>
+<script src="js/spots.js"></script>
 <!-- endbuild -->
+<script type="text/javascript">
+    $(function () {
+        app.init();
+    });
+</script>
 </body>
