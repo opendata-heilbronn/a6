@@ -39,6 +39,7 @@
 }
 
 .card img {
+    position: relative;
     max-width: 100%;
 }
 
@@ -48,6 +49,9 @@
 }
 
 .card-teaser-text {
+    margin-top: -30px;
+    position: relative;
+    z-index: 10;
     background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 1) 15%, rgba(255, 255, 255, 1) 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0.8)), color-stop(15%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(255, 255, 255, 1))); /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 1) 15%, rgba(255, 255, 255, 1) 100%); /* Chrome10+,Safari5.1+ */
@@ -60,7 +64,7 @@
 
 .card-teaser h2 {
     margin-top: 0;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 #carousel, #carousel ul, #carousel li {
