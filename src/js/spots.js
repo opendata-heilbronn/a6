@@ -14,7 +14,10 @@
             snap: 'li',
             scrollbar: true,
             snapSpeed: 400,
-            keyBindings: true
+            keyBindings: true,
+            indicators: {
+                el: '.indicator'
+            }
         });
         cardScroll.on('scrollEnd', function () {
             activateCard(this.currentPage.pageY);
