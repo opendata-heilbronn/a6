@@ -7,7 +7,7 @@
     <!-- build:css css/app.min.css -->
     <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
     <link href="bower_components/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet"/>
-    <link href="http://fonts.googleapis.com/css?family=Arimo" rel="stylesheet"/>
+    <!--<link href="http://fonts.googleapis.com/css?family=Arimo" rel="stylesheet"/>-->
     <link href="css/base.css" rel="stylesheet"/>
     <link href="css/spots.css" rel="stylesheet"/>
     <!-- endbuild -->
@@ -16,52 +16,59 @@
 <body>
 <div class="fullscreen">
     <div class="fullscreen-content">
-        <div id="scroller">
-            <div class="pane slide">
-                <div class="spot-content">
-                    <section class="fullheight">
-                        <div class="spot-title-img spot-title-img-steinsfurt"></div>
-                        <div class="spot-teaser">
-                            <h2>Sinsheim-Steinsfurt</h2>
+        <div class="pane-scroller">
+            <div class="pane">
+                <div class="spot-content" id="test-spot">
+                    <div class="card-scroller">
+                        <ul class="card-list list-unstyled">
+                            <li class="card card-teaser active">
+                                <img src="img/spot/steinsfurt.jpg"/>
 
-                            Auf dem Streckenabschnitt zwischen Weinsberger Kreuz und Öhringen ist kein eindeutiger
-                            Unfallschwerpunkt
-                            zu erkennen. In den vergangenen Monaten gab es hier aber mehrere schwere Lkw-Unfälle.
-                        </div>
-                    </section>
-                    <section class="card">
-                        Auf dem Streckenabschnitt zwischen Weinsberger Kreuz und Öhringen ist kein eindeutiger
-                        Unfallschwerpunkt
-                        zu erkennen. Die Daten zeigen aber: xxx
-                        In den vergangenen Monaten gab es hier aber mehrere schwere Lkw-Unfälle. Die Autobahn
-                        war
-                        teilweise
-                        stundenlang gesperrt, die Umleitungsstrecken kollabierten.
-                    </section>
-                    <section class="card">
-                        Zwar herrscht hier weniger Verkehr als bei Neckarsulm. Der Streckenabschnitt weist aber
-                        an
-                        der
-                        Zählstelle bei Schwabbach einen extrem hohen Schwerverkehrsanteil (22,6 Prozent) auf.
-                        Mindestens jedes
-                        fünfte Fahrzeug ist ein Lkw. Auf der A81 bei Pleidelsheim ist nur zehnte Fahrzeug ein
-                        Lkw.
-                    </section>
-                    <section class="card">
-                        Die Daten zeigen: Wo Lkws an Unfällen beteiligt sind… Schwere Unfälle führen zu
-                        stundenlangen
-                        Streckensperrungen. Der Verkehr muss ausgeleitet werden. Aber die Umleitungsstrecken
-                        können
-                        den
-                        A6-Verkehr nicht bewältigen. Die Straßen sind nicht für diesen Verkehr ausgelegt.
-                    </section>
+                                <div class="card-teaser-text">
+                                    <h2>Sinsheim-Steinsfurt</h2>
+
+                                    Auf dem Streckenabschnitt zwischen Weinsberger Kreuz und Öhringen ist kein
+                                    eindeutiger
+                                    Unfallschwerpunkt
+                                    zu erkennen. In den vergangenen Monaten gab es hier aber mehrere schwere
+                                    Lkw-Unfälle.
+                                </div>
+                            </li>
+                            <li class="card">
+                                Auf dem Streckenabschnitt zwischen Weinsberger Kreuz und Öhringen ist kein eindeutiger
+                                Unfallschwerpunkt
+                                zu erkennen. Die Daten zeigen aber: xxx
+                                In den vergangenen Monaten gab es hier aber mehrere schwere Lkw-Unfälle. Die Autobahn
+                                war
+                                teilweise
+                                stundenlang gesperrt, die Umleitungsstrecken kollabierten.
+                            </li>
+                            <li class="card">
+                                Zwar herrscht hier weniger Verkehr als bei Neckarsulm. Der Streckenabschnitt weist aber
+                                an
+                                der
+                                Zählstelle bei Schwabbach einen extrem hohen Schwerverkehrsanteil (22,6 Prozent) auf.
+                                Mindestens jedes
+                                fünfte Fahrzeug ist ein Lkw. Auf der A81 bei Pleidelsheim ist nur zehnte Fahrzeug ein
+                                Lkw.
+                            </li>
+                            <li class="card">
+                                Die Daten zeigen: Wo Lkws an Unfällen beteiligt sind… Schwere Unfälle führen zu
+                                stundenlangen
+                                Streckensperrungen. Der Verkehr muss ausgeleitet werden. Aber die Umleitungsstrecken
+                                können
+                                den
+                                A6-Verkehr nicht bewältigen. Die Straßen sind nicht für diesen Verkehr ausgelegt.
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="spot-footer">
                     <img src="img/spot/karte_steinsfurt.svg" class="spot-footer-map"/>
                 </div>
             </div>
-            <div class="pane slide">
-                <div class="spot-content">
+            <div class="pane">
+            <div class="spot-content">
                     <div class="fullheight">
                         <div class="spot-title-img spot-title-img-fuerfeld"></div>
                         <div class="spot-teaser">
@@ -110,7 +117,7 @@
 
 <!-- build:js js/app.min.js -->
 <script src="bower_components/jquery/dist/jquery.js"></script>
-<script src="bower_components/iscroll/build/iscroll.js"></script>
+<script src="bower_components/iscroll/build/iscroll-probe.js"></script>
 <script src="bower_components/modernizr/modernizr.js"></script>
 <script src="bower_components/d3/d3.js"></script>
 <script src="bower_components/hammerjs/hammer.js"></script>
