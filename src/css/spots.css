@@ -5,6 +5,10 @@
     background: #F0F0F0;
 }
 
+#overview {
+    height: 100%;
+}
+
 .spot-footer {
     position: absolute;
     bottom: 0;

@@ -39,12 +39,14 @@
             paneScroll.on('scrollEnd', function () {
                 var paneId = $('.panes').find('.cards').eq(this.currentPage.pageX).attr('id');
                 if (paneId !== currentPaneId) {
-                    currentPaneId = paneId;
                     if (cardScroll !== null) {
                         cardScroll.scrollTo(0, 0, 0);
+                        $('#' + currentPaneId).find('.active').removeClass('active');
+                        $('#' + currentPaneId).find('.card-list').children().eq(0).addClass('active');
                         cardScroll.destroy();
                         cardScroll = null;
                     }
+                    currentPaneId = paneId;
                     if (paneId !== "welcome-screen") {
                         $('.indicator').show();
                         cardScroll = scrolling.buildCardScroll('#' + currentPaneId);
