@@ -54,11 +54,6 @@ html, body, .fullheight, .pane {
     text-size-adjust: none;
 }
 
-.card-list {
-    height: 100%;
-    position: relative;
-}
-
 .card-scroller {
     position: relative;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -79,6 +74,12 @@ html, body, .fullheight, .pane {
     -ms-text-size-adjust: none;
     -o-text-size-adjust: none;
     text-size-adjust: none;
+}
+
+.card-list {
+    height: 100%;
+    position: relative;
+    padding-bottom: 50%;
 }
 
 .card-list .card:first-child {
