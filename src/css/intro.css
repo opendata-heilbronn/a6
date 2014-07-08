@@ -1,0 +1,76 @@
+#welcome-screen {
+    height: 100%;
+    position: relative;
+}
+
+.row-intro-bg {
+    height: 25%;
+}
+
+.row-intro-bg div {
+    height: 100%;
+}
+
+.intro-bg-1 {
+    background-image: url('../img/intro/hohenlohe.jpg');
+}
+
+.intro-bg-2 {
+    background-image: url('../img/intro/kraichgau.jpg');
+}
+
+.intro-bg-3 {
+    background-image: url('../img/intro/unfall.jpg');
+}
+
+.intro-bg-4 {
+    background-image: url('../img/intro/neckartalbruecke.jpg');
+}
+
+.intro-bg-5 {
+    background-image: url('../img/intro/reichtert.jpg');
+}
+
+.intro-bg-6 {
+    background-image: url('../img/intro/weinsberg.jpg');
+}
+
+.intro-bg-7 {
+    background-image: url('../img/intro/fuerfeld.jpg');
+}
+
+.intro-bg-8 {
+    background-image: url('../img/intro/unfall2.jpg');
+}
+
+.intro-bg {
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.intro-box {
+    position: absolute;
+    height: 140px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    margin-top: -70px;
+    background: url('../img/intro/bg_yellow.jpg');
+    color: #FFF;
+    padding-top: 5px;
+}
+
+.intro-text h1,
+.intro-text p {
+    opacity: 0.8;
+    margin-left: 14px;
+}
+
+.intro-text h1 {
+    font-weight: normal;
+}
+
+.explain-slide {
+    height: 90px;
+    margin: 18px 0 18px 28px;
+}

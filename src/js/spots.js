@@ -27,8 +27,7 @@
             return cardScroll;
         },
         activatePaneScrolling: function () {
-            var currentPaneId = 'spot-steinsfurt';
-            var cardScroll = scrolling.buildCardScroll('#' + currentPaneId);
+            var currentPaneId = null, cardScroll = null;
             var paneScroll = new IScroll('.panes', {
                 scrollX: true,
                 scrollY: false,
@@ -41,9 +40,17 @@
                 var paneId = $('.panes').find('.cards').eq(this.currentPage.pageX).attr('id');
                 if (paneId !== currentPaneId) {
                     currentPaneId = paneId;
-                    cardScroll.scrollTo(0, 0, 0);
-                    cardScroll.destroy();
-                    cardScroll = scrolling.buildCardScroll('#' + currentPaneId);
+                    if (cardScroll !== null) {
+                        cardScroll.scrollTo(0, 0, 0);
+                        cardScroll.destroy();
+                        cardScroll = null;
+                    }
+                    if (paneId !== "welcome-screen") {
+                        $('.indicator').show();
+                        cardScroll = scrolling.buildCardScroll('#' + currentPaneId);
+                    } else {
+                        $('.indicator').hide();
+                    }
                 }
             });
 
