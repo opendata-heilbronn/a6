@@ -60,8 +60,8 @@
             }
         ],
         build: function () {
-            var width = 280,
-                height = 280,
+            var width = $(window).width() - 64,
+                height = width,
                 radius = Math.min(width, height) / 2;
 
             var color = d3.scale.ordinal()

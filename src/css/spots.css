@@ -24,13 +24,16 @@
 }
 
 .card {
-    box-sizing: border-box;
-    border: 1px solid rgba(220, 220, 220, 0.8);
     width: 100%;
     margin: 16px 0;
-    padding: 16px;
-    background: #FFF;
     position: relative;
+}
+
+.card-content {
+    background: #FFF;
+    padding: 16px;
+    border: 1px solid rgba(220, 220, 220, 0.8);
+    margin: 0 16px;
 }
 
 .card.active {
@@ -48,6 +51,7 @@
 }
 
 .card-teaser-text {
+    background: #FFF;
     margin-top: -30px;
     position: relative;
     z-index: 10;
