@@ -4,26 +4,13 @@
     var scrolling = {
         buildCardScroll: function (selector) {
             var $element = $(selector);
-            var activateCard = function (index) {
-                $element.find('.card').removeClass('active');
-                $element.find('.card-list').children().eq(index).addClass('active');
-            };
             var cardScroll = new IScroll(selector, {
                 scrollX: false,
                 scrollY: true,
-                momentum: false,
-                snap: 'li',
+                momentum: true,
                 scrollbar: true,
-                snapSpeed: 400,
-                keyBindings: true,
-                indicators: {
-                    el: '.indicator'
-                }
+                keyBindings: true
             });
-            cardScroll.on('scrollEnd', function () {
-                activateCard(this.currentPage.pageY);
-            });
-            activateCard(0);
             return cardScroll;
         },
         activatePaneScrolling: function () {
@@ -33,7 +20,7 @@
                 scrollY: false,
                 momentum: false,
                 snap: true,
-                snapSpeed: 400,
+                snapSpeed: 200,
                 keyBindings: true
             });
             paneScroll.on('scrollEnd', function () {
@@ -41,17 +28,12 @@
                 if (paneId !== currentPaneId) {
                     if (cardScroll !== null) {
                         cardScroll.scrollTo(0, 0, 0);
-                        $('#' + currentPaneId).find('.active').removeClass('active');
-                        $('#' + currentPaneId).find('.card-list').children().eq(0).addClass('active');
                         cardScroll.destroy();
                         cardScroll = null;
                     }
                     currentPaneId = paneId;
                     if (paneId !== "welcome-screen") {
-                        $('.indicator').show();
                         cardScroll = scrolling.buildCardScroll('#' + currentPaneId);
-                    } else {
-                        $('.indicator').hide();
                     }
                 }
             });
