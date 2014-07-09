@@ -135,3 +135,7 @@
 .x.axis path {
     display: none;
 }
+
+.area {
+    fill: steelblue;
+}
