@@ -16,7 +16,7 @@
         }
     ];
 
-    var containerSelector = '#steinsfurt-pie-chart';
+    var containerSelector = '#chart-steinsfurt-truck-accidents';
     var build = function () {
         var width = 300,
             height = 300,
@@ -25,7 +25,7 @@
             $container = $(containerSelector);
 
         var color = d3.scale.ordinal()
-            .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+            .range(["#6b486b", "#a05d56", "#ff8c00"]);
 
         var arc = d3.svg.arc()
             .outerRadius(radius - 10)
@@ -69,13 +69,13 @@
 
         var onResize = function () {
             var targetWidth = $container.width();
-            svg.attr("height", targetWidth / aspect);
+            svg.attr("height", Math.round(targetWidth / aspect));
         };
         $(window).on("resize", onResize);
         onResize();
     };
 
-    app.charts.steinsfurt = {
+    app.charts.steinsfurtTruckAccidents = {
         'init': build
     };
 })

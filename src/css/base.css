@@ -85,3 +85,8 @@ html, body, .fullheight, .pane {
 .card-list .card:first-child {
     margin-top: 0;
 }
+
+h2 small {
+    margin-top: 4px;
+    display: block;
+}

@@ -4,10 +4,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://fonts.googleapis.com/css?family=Arimo" rel="stylesheet"/>
     <!-- build:css css/app.min.css -->
     <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
     <link href="bower_components/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet"/>
-    <!--<link href="http://fonts.googleapis.com/css?family=Arimo" rel="stylesheet"/>-->
     <link href="css/base.css" rel="stylesheet"/>
     <link href="css/intro.css" rel="stylesheet"/>
     <link href="css/spots.css" rel="stylesheet"/>
@@ -55,23 +55,22 @@
         <div class="card-scroller">
             <ul class="card-list list-unstyled">
                 <li class="card card-teaser">
-                    <img src="img/spot/fuerfeld.jpg"/>
+                    <img src="img/a6_europa.jpg"/>
 
                     <div class="card-teaser-text">
-                        <h2>Die A6</h2>
+                        <h2>Die A6
+                            <small>Verkehrsader Europas</small>
+                        </h2>
 
-                        Die A6 ist die Verkehrsader der Region Heilbronn, das Drehkreuz Europas, die Verbindung zwischen
+                        Die A6 ist die <strong>Verkehrsader</strong> der Region Heilbronn, das
+                        <strong>Drehkreuz</strong> Europas, die Verbindung zwischen
                         Paris und Prag.
                     </div>
                 </li>
                 <li class="card">
                     <div class="card-content">
-                        <img src="img/a6_europa.jpg"/>
-                    </div>
-                </li>
-                <li class="card">
-                    <div class="card-content">
-                        Die A6 ist einer der am stärksten frequentierten Autobahnen in Deutschland. Das zeigen die Daten
+                        Die A6 ist einer der am <strong>stärksten frequentierten</strong> Autobahnen in Deutschland. Das
+                        zeigen die Daten
                         aus
                         den Dauerzählstellen an Autobahnen. Mehr als 96000 Fahrzeuge passieren täglich die A6-Zählstelle
                         in
@@ -80,14 +79,16 @@
                 </li>
                 <li class="card">
                     <div class="card-content">
-                        Jedes fünfte Fahrzeug ist ein Lkw. Das liegt deutlich über den Durchschnittswerten aller
-                        Dauerzählstellen.
-                        <div id="chart-a6-traffic"></div>
+                        <p>Jedes fünfte Fahrzeug ist ein Lkw. Das liegt deutlich über den Durchschnittswerten aller
+                            Dauerzählstellen.</p>
+
+                        <div id="chart-overview-trucks"></div>
                     </div>
                 </li>
                 <li class="card">
                     <div class="card-content">
-                        Wo viele Fahrzeuge verkehren, steigt das Risiko für Unfälle. In diesem Jahr gab es bereits viele
+                        Wo viele Fahrzeuge verkehren, steigt das <strong>Risiko</strong> für Unfälle. In diesem Jahr gab
+                        es bereits viele
                         schwere Verkehrsunfälle auf der A6 - vor allem mit Lkw-Beteiligung. “Es wird immer schlimmer”
                         oder
                         “Schon wieder ein LKW-Unfall. Hört das auch mal wieder auf?”, sind die Reaktionen in den
@@ -97,9 +98,11 @@
                 </li>
                 <li class="card">
                     <div class="card-content">
-                        Immer mehr Unfälle. Das ist das subjektive Gefühl unserer Leser. Das haben wir zum Anlass
+                        Immer mehr Unfälle. Das ist das <strong>subjektive Gefühl</strong> unserer Leser. Das haben wir
+                        zum Anlass
                         genommen,
-                        uns die Daten mal genauer anzuschauen. Das Statistische Landesamt hat uns einen Datensatz zur
+                        uns die Daten mal genauer anzuschauen. Das Statistische Landesamt hat uns einen <strong>Datensatz</strong>
+                        zur
                         Verfügung gestellt mit allen polizeilich erfassten Unfälle auf der A6 von Januar 2010 bis
                         einschließlich März 2014. Diese Unfälle haben wir auf der Karte visualisiert.
                     </div>
@@ -134,7 +137,7 @@
                     <img src="img/spot/steinsfurt.jpg"/>
 
                     <div class="card-teaser-text">
-                        <h2>Sinsheim-Steinsfurt<br/>
+                        <h2>Sinsheim-Steinsfurt
                             <small>viele LKW-Unfälle</small>
                         </h2>
 
@@ -145,7 +148,7 @@
                 </li>
                 <li class="card">
                     <div class="card-content">
-                        <div class="chart" id="steinsfurt-pie-chart"></div>
+                        <div class="chart" id="chart-steinsfurt-truck-accidents"></div>
                     </div>
                 </li>
             </ul>
@@ -163,7 +166,7 @@
                     <img src="img/spot/fuerfeld.jpg"/>
 
                     <div class="card-teaser-text">
-                        <h2>Fürfeld<br/>
+                        <h2>Fürfeld
                             <small>Staus haben extrem zugenommen</small>
                         </h2>
 
@@ -433,7 +436,8 @@
 <script src="bower_components/hammerjs/hammer.js"></script>
 <script src="js/app.js"></script>
 <script src="js/scroll.js"></script>
-<script src="js/chart-steinsfurt.js"></script>
+<script src="js/chart-overview-trucks.js"></script>
+<script src="js/chart-steinsfurt-truck-accidents.js"></script>
 <!-- endbuild -->
 <script type="text/javascript">
     $(function () {
