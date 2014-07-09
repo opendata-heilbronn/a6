@@ -132,10 +132,21 @@
     fill: steelblue;
 }
 
+line.bar {
+    stroke: steelblue;
+    stroke-width: 14;
+}
+
 .x.axis path {
     display: none;
 }
 
 .area {
     fill: steelblue;
+}
+
+circle.windrose {
+    fill: none;
+    stroke: #444;
+    stroke-width: 0.5;
 }
