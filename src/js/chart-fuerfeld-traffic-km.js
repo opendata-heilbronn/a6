@@ -4,15 +4,15 @@
     var data = [
         {
             label: '2013',
-            value: 2939
+            value: 7619
         },
         {
             label: '2014',
-            value: 3851
+            value: 11581
         }
     ];
 
-    var containerSelector = '#chart-fuerfeld-traffic';
+    var containerSelector = '#chart-fuerfeld-traffic-km';
     var build = function () {
         var margin = {top: 10, right: 10, bottom: 20, left: 40},
             width = 300,
@@ -84,7 +84,7 @@
         onResize();
     };
 
-    app.charts.fuerfeldTraffic = {
+    app.charts.fuerfeldTrafficKm = {
         'init': build
     };
 })
