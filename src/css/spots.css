@@ -131,6 +131,12 @@ img.accident-icon {
     background: #606060;
 }
 
+.card-content h3 {
+    margin: 0 0 14px 0;
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+}
+
 #carousel, #carousel ul, #carousel li {
     min-height: 100%;
     height: 100%;
