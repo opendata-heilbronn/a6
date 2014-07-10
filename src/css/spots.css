@@ -1,5 +1,5 @@
 .spot-content {
-    height: 80%;
+    height: 100%;
     position: relative;
     overflow-y: scroll;
     background: #F0F0F0;
@@ -48,26 +48,87 @@
 .card-teaser {
     padding: 0;
     border: none;
+    position: relative;
+}
+
+.spot-title-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 14px;
 }
 
 .card-teaser-text {
     background: #FFF;
-    margin-top: -30px;
+    margin-top: -55px;
     position: relative;
     z-index: 10;
-    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 1) 15%, rgba(255, 255, 255, 1) 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0.8)), color-stop(15%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(255, 255, 255, 1))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 1) 15%, rgba(255, 255, 255, 1) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 1) 15%, rgba(255, 255, 255, 1) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 1) 15%, rgba(255, 255, 255, 1) 100%); /* IE10+ */
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 1) 15%, rgba(255, 255, 255, 1) 100%); /* W3C */
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0.8)), color-stop(25%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(255, 255, 255, 1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 1) 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ccffffff', endColorstr='#ffffff', GradientType=0); /* IE6-9 */
-    padding: 16px;
+    padding: 8px 16px 16px 16px;
+}
+
+.accident-icon-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+}
+
+img.accident-icon {
+    display: block;
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
 }
 
 .card-teaser h2 {
     margin-top: 0;
     font-size: 20px;
+}
+
+.spot-title-bar {
+    position: absolute;
+    bottom: 13px;
+    background: rgba(0, 0, 0, 0.6);
+    height: 23px;
+    font-size: 12px;
+    line-height: 14px;
+    width: 100%;
+    color: #F0F0F0;
+    z-index: 10;
+}
+
+.spot-number,
+.spot-title-bar h2 {
+    position: absolute;
+    top: 4px;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.spot-number {
+    left: 16px;
+}
+
+.spot-title-bar h2 {
+    left: 50%;
+    margin-left: 36px;
+    font-weight: normal;
+}
+
+.spot-title-map img {
+    width: 100%;
+}
+
+.spot-title-map {
+    margin-top: -14px;
+    background: #606060;
 }
 
 #carousel, #carousel ul, #carousel li {
