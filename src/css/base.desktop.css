@@ -1,0 +1,27 @@
+html, body {
+    min-height: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    overflow: hidden;
+}
+
+body {
+    /* background: url('../img/bg.jpg') center bottom/cover; */
+}
+
+.navbar {
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+.navbar-brand {
+    line-height: 24px;
+    padding: 10px 15px;
+}
+
+.navbar-brand img {
+    height: 24px;
+}

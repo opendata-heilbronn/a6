@@ -1,0 +1,60 @@
+#welcome-screen {
+    max-width: 1770px;
+    margin: 0 auto;
+}
+
+.intro-box {
+    background: url('../img/intro/bg_yellow.desktop.jpg');
+}
+
+.intro-bg-1 {
+    background-image: url('../img/intro/hohenlohe.desktop.jpg');
+}
+
+.intro-bg-2 {
+    background-image: url('../img/intro/kraichgau.desktop.jpg');
+}
+
+.intro-bg-3 {
+    background-image: url('../img/intro/unfall.desktop.jpg');
+}
+
+.intro-bg-4 {
+    background-image: url('../img/intro/neckartalbruecke.desktop.jpg');
+}
+
+.intro-bg-5 {
+    background-image: url('../img/intro/reichtert.desktop.jpg');
+}
+
+.intro-bg-6 {
+    background-image: url('../img/intro/weinsberg.desktop.jpg');
+}
+
+.intro-bg-7 {
+    background-image: url('../img/intro/fuerfeld.desktop.jpg');
+}
+
+.intro-bg-8 {
+    background-image: url('../img/intro/unfall2.desktop.jpg');
+}
+
+.intro-text {
+    padding-left: 10%;
+}
+
+.explain-slide {
+    right: 5%;
+}
+
+.intro-text h1 {
+    font-size: 400%;
+}
+
+.intro-text span {
+    font-size: 200%;
+}
+
+.row-intro-bg {
+    height: 100%;
+}

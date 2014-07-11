@@ -5,7 +5,9 @@ var app = {
     'use strict';
 
     app.init = function () {
-        app.scroll.init();
+        if (app.scroll) {
+            app.scroll.init();
+        }
         Object.keys(app.charts).forEach(function (chartId) {
             app.charts[chartId].init();
         })
