@@ -2,7 +2,6 @@
     height: 100%;
     position: relative;
     overflow-y: scroll;
-    background: #F0F0F0;
 }
 
 #overview {
@@ -24,7 +23,6 @@
 }
 
 .card {
-    width: 100%;
     margin: 16px 0;
     position: relative;
 }
@@ -46,9 +44,26 @@
 }
 
 .card-teaser {
-    padding: 0;
     border: none;
     position: relative;
+}
+
+@media (min-width: 992px) {
+    .card-list {
+        margin-top: -16px;
+    }
+}
+
+@media (max-width: 991px) {
+    .card-teaser {
+        margin-top: 0;
+    }
+
+    .card-teaser .card-content {
+        padding: 0;
+        margin: 0;
+        border: none;
+    }
 }
 
 .spot-title-container {

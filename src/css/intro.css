@@ -27,6 +27,9 @@
     bottom: 0;
 }
 
+@media (min-width: 992px) {
+}
+
 .intro-bg-1 {
     background-image: url('../img/intro/hohenlohe.jpg');
 }
@@ -61,6 +64,7 @@
 
 .intro-bg {
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 .intro-box {

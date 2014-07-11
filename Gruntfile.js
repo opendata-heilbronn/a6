@@ -42,7 +42,7 @@ module.exports = function (grunt) {
                         dot: true,
                         cwd: 'src/',
                         dest: 'dist/',
-                        src: ['*.{ico,txt,html}', 'img/{,*/}*.{gif,svg}', 'fonts/*']
+                        src: ['*.{ico,txt,html}', 'img/{,*/}*.{gif,png,jpg,jpeg,svg}', 'fonts/*']
                     }
                 ]
             }
@@ -53,18 +53,6 @@ module.exports = function (grunt) {
                     {
                         dot: true,
                         src: ['dist/{css,js,img}']
-                    }
-                ]
-            }
-        },
-        imagemin: {
-            dist: {
-                files: [
-                    {
-                        expand: true,
-                        cwd: 'src/img',
-                        src: '{,*/}*.{png,jpg,jpeg}',
-                        dest: 'dist/img'
                     }
                 ]
             }
@@ -125,6 +113,6 @@ module.exports = function (grunt) {
             'connect:server:keepalive'
         ]);
     });
-    grunt.registerTask('build', ['clean:dist', 'useminPrepare', 'imagemin', 'concat', 'cssmin', 'uglify', 'copy:dist', 'rev', 'usemin']);
+    grunt.registerTask('build', ['clean:dist', 'useminPrepare', 'concat', 'cssmin', 'uglify', 'copy:dist', 'rev', 'usemin']);
     grunt.registerTask('default', ['build']);
 };

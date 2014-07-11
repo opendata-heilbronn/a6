@@ -16,6 +16,36 @@
 </head>
 <body>
 <div class="fullscreen">
+<nav class="navbar navbar-default hidden-xs hidden-sm">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <span class="navbar-brand"><img src="img/logo.png" alt="Heilbronner Stimme"/></span>
+        </div>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li><a>Über das Projekt</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="row fullheight">
+<nav class="col-md-4 col-lg-3 hidden-sm hidden-xs">
+    <ul class="card-nav nav nav-pills nav-stacked">
+        <li><a>Die A6 - Eine Analyse</a></li>
+        <li><a>Verkehrsader Europas</a></li>
+        <li><a>Schwerpunkte</a>
+            <ul class="nav nav-pills nav-stacked card-nav-sublist">
+                <li class="active"><a>Sinsheim-Steinsfurt</a></li>
+                <li><a>Fürfeld</a></li>
+                <li><a>Neckartalbrücke</a></li>
+                <li><a>Weinsberger Kreuz</a></li>
+                <li><a>Hohenlohe</a></li>
+            </ul>
+        </li>
+        <li><a>Fazit</a></li>
+    </ul>
+</nav>
+<div class="col-md-8 col-lg-9 col-sm-12 col-xs-12 panes-col">
 <div class="fullscreen-content panes">
 <div class="pane-scroller">
 <div class="pane">
@@ -53,72 +83,73 @@
 <div class="pane">
     <div class="spot-content cards" id="overview">
         <div class="card-scroller">
-            <ul class="card-list list-unstyled">
-                <li class="card card-teaser">
+            <ul class="card-list list-unstyled row">
+                <li class="card card-teaser col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <img src="img/a6_europa.jpg"/>
+                </li>
+                <li class="card col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="card-content">
+                        <h3>Die A6 als Teil der E50</h3>
 
-                    <div class="card-teaser-text">
-                        <h2>Die A6
-                            <small>Verkehrsader Europas</small>
-                        </h2>
-
-                        Die A6 ist die <strong>Verkehrsader</strong> der Region Heilbronn, das
-                        <strong>Drehkreuz</strong> Europas, die Verbindung zwischen
-                        Paris und Prag.
+                        <p>Die Bundesautobahn 6 (A6) ist die bedeutendste Verkehrsader der Region Heilbronn-Franken -
+                            und das Drehkreuz Europas. Sie ist Teil der fast <strong>5000 Kilometer</strong> langen
+                            Europastraße 50, die
+                            Paris mit Prag verbindet und von Brest bis ins russische Machatschkala führt.
+                        </p>
                     </div>
                 </li>
-                <li class="card">
+                <li class="card col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="card-content">
-                        Die A6 ist einer der am <strong>stärksten frequentierten</strong> Autobahnen in Deutschland. Das
-                        zeigen die Daten
-                        aus
-                        den Dauerzählstellen an Autobahnen. Mehr als 96.000 Fahrzeuge passieren täglich die
-                        A6-Zählstelle
-                        in
-                        Neckarsulm.
+                        <blockquote>
+                            <p>Die A6 hat vor dem Hintergrund der EU-Osterweiterung eine zentrale Bedeutung als
+                                Handelsachse. Die Region um Stuttgart gilt als eine der Zentren des deutschen
+                                Mittelstands.</p>
+                            <footer>Someone famous in <cite title="Source Title">Tomás Bayón, Professor für Marketing
+                                und Dienstleistungsmanagement, German Graduate School, Heilbronn</cite></footer>
+                        </blockquote>
                     </div>
                 </li>
-                <li class="card">
+                <li class="card col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="card-content">
-                        <p>Jedes fünfte Fahrzeug ist ein Lkw. Das liegt deutlich über den Durchschnittswerten aller
-                            Dauerzählstellen.</p>
+                        Aufgrund dieser wirtschaftlichen Bedeutung ist die A6 eine der am stärksten frequentierten
+                        Autobahnen in Deutschland. Das zeigen die Daten aus den Dauerzählstellen an Autobahnen. Mehr als
+                        96.000 Fahrzeuge passieren täglich die A6-Zählstelle in Neckarsulm.
+                    </div>
+                </li>
+                <li class="card col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="card-content">
+                        <p>Jedes fünfte Fahrzeug ist dort ein <strong>Lkw</strong>. Das liegt deutlich über den
+                            Durchschnittswerten aller Dauerzählstellen.</p>
 
                         <div id="chart-overview-trucks"></div>
                     </div>
                 </li>
-                <li class="card">
+                <li class="card col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="card-content">
-                        Wo viele Fahrzeuge verkehren, steigt das <strong>Risiko</strong> für Unfälle. In diesem Jahr gab
-                        es bereits viele
-                        schwere Verkehrsunfälle auf der A6 - vor allem mit Lkw-Beteiligung. “Es wird immer schlimmer”
-                        oder
-                        “Schon wieder ein LKW-Unfall. Hört das auch mal wieder auf?”, sind die Reaktionen in den
-                        sozialen
-                        Netzwerken.
+                        <p>Wo viele Fahrzeuge verkehren, steigt das <strong>Risiko</strong> für Unfälle. In diesem Jahr
+                            gab
+                            es bereits viele schwere Verkehrsunfälle auf der A6 - vor allem mit Lkw-Beteiligung.</p>
+
+                        <p>Immer mehr Unfälle: Das ist auch das <strong>subjektive Gefühl</strong> unserer Leser, gerade
+                            in
+                            den sozialen Netzwerken. Diesen Eindruck haben wir zum Anlass genommen, die Unfall-Daten der
+                            vergangenen Jahre zu analysieren. Das Statistische Landesamt Baden-Württemberg hat uns einen
+                            <strong>Datensatz</strong> mit allen polizeilich erfassten Unfällen auf der A6 von Januar
+                            2010 bis einschließlich
+                            April 2014 zur Verfügung gestellt.</p>
                     </div>
-                </li>
-                <li class="card">
+                <li class="card col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="card-content">
-                        Immer mehr Unfälle. Das ist das <strong>subjektive Gefühl</strong> unserer Leser. Das haben wir
-                        zum Anlass
-                        genommen,
-                        uns die Daten mal genauer anzuschauen. Das Statistische Landesamt hat uns einen <strong>Datensatz</strong>
-                        zur
-                        Verfügung gestellt mit allen polizeilich erfassten Unfälle auf der A6 von Januar 2010 bis
-                        einschließlich März 2014. Diese Unfälle haben wir auf der Karte visualisiert.
-                    </div>
-                <li class="card">
-                    <div class="card-content">
-                        <p>Die Karte zeigt klare
-                            Abschnitte in unserem Verbreitungsgebiet, an denen es besonders häufig kracht:
-                            Sinsheim-Steinsfurt,
-                            Fürfeld, Bereich Neckartalbrücke, Weinsberger Kreuz und Hohenlohe. Wir nehmen diese fünf
-                            Unfallschwerpunkte genauer unter die Lupe und wollen wissen: Wo haben die Unfälle
-                            zugenommen?
-                            Welche
-                            Rolle spielt der Lkw-Verkehr? Wo behindern Bauvorhaben den Verkehr? Ist der Stau zum
-                            Normalzustand
-                            geworden?
+                        <p>Wir haben aus diesen Daten eine Unfallkarte gemacht. Und diese zeigt klare Abschnitte in
+                            unserem Verbreitungsgebiet, an denen es besonders häufig kracht: Sinsheim-Steinsfurt,
+                            Fürfeld, im Bereich der Neckartalbrücke, das Weinsberger Kreuz und Hohenlohe.</p>
+
+                        <p>In dieser
+                            A6-Analyse nehmen die fünf <strong>Unfallschwerpunkte</strong> unter die Lupe und wählen an
+                            jedem Schwerpunkt
+                            einen anderen Fokus: Welche Rolle spielt der Lkw-Verkehr? Ist der Stau zum Normalzustand
+                            geworden? Wo behindern Bauvorhaben den Verkehr? Welche Auswirkungen haben die Unfälle auf
+                            die Umleitungsstrecken?
                         </p>
 
                         <p>
@@ -133,10 +164,10 @@
 <div class="pane">
     <div class="spot-content cards" id="spot-steinsfurt">
         <div class="card-scroller">
-            <ul class="card-list list-unstyled">
-                <li class="card card-teaser">
+            <ul class="card-list list-unstyled row">
+                <li class="card card-teaser col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="spot-title-container">
-                        <img src="img/spot/steinsfurt.jpg"/>
+                    <img src="img/spot/steinsfurt.jpg"/>
 
                         <div class="accident-icon-container">
                             <img src="img/accident_icon.svg" class="accident-icon"/>
@@ -152,15 +183,41 @@
                         <img src="img/spot/karte_steinsfurt.svg"/>
                     </div>
                 </li>
-                <li class="card">
+                <li class="card col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="card-content">
                         <h3>Viele Lkw-Unfälle</h3>
 
-                        <p>An fast 40 Prozent aller Unfälle im Bereich Sinsheim-Steinsfurt sind Lkw beteiligt.
-                            Das hat viele Gründe: Der Schwerlastanteil auf der A6 ist im Vergleich zu anderen
-                            Autobahnen extrem hoch. Fast jedes fünfte Fahrzeug ist ein Lkw.</p>
+                        <p>Die A6 bei Sinsheim-Steinsfurt ist eine bekannte Stau- und Unfallstrecke. Auf dem hügeligen
+                            Abschnitt behindern behäbige Lkw den Verkehrsfluss. Es kommt es immer wieder zu
+                            Verkehrsbehinderungen und Auffahrunfällen.
+                        </p>
 
+                        <p>Die Daten zeigen: An fast 40 Prozent aller Unfälle im Bereich Sinsheim-Steinsfurt waren Lkw
+                            beteiligt. Kein Wunder: Der Schwerlastanteil auf der A6 ist im Vergleich zu anderen
+                            Autobahnen extrem hoch. Fast jedes fünfte Fahrzeug ist ein Lastwagen, wie die Auswertungen
+                            an der Dauerzählstelle Neckarsulm zeigen.
+                        </p>
+                    </div>
+                </li>
+                <li class="card col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="card-content">
                         <div class="chart" id="chart-steinsfurt-truck-accidents"></div>
+                        <p><em>Quelle: BAST</em></p>
+                    </div>
+                </li>
+                <li class="card col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="card-content">
+                        Doch wieso sind überproportional viele Lkw an Unfällen beteiligt? Sind die Lkw-Fahrer die Bad
+                        Guys der A6?
+                    </div>
+                </li>
+                <li class="card col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="card-content">
+                        Bei 60 Prozent der Lkw-Unfälle auf Autobahnen ist die Ursache auf <strong>Fehlverhalten</strong>
+                        der
+                        Fahrzeugführer zurückzuführen. Der häufigste Grund: zu geringer <strong>Abstand</strong>,
+                        gefolgt von nicht
+                        angepasster <strong>Geschwindigkeit</strong>.
                     </div>
                 </li>
             </ul>
@@ -170,10 +227,10 @@
 <div class="pane">
     <div class="spot-content cards" id="spot-fuerfeld">
         <div class="card-scroller">
-            <ul class="card-list list-unstyled">
-                <li class="card card-teaser">
+            <ul class="card-list list-unstyled row">
+                <li class="card card-teaser col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="spot-title-container">
-                        <img src="img/spot/fuerfeld.jpg"/>
+                    <img src="img/spot/fuerfeld.jpg"/>
 
                         <div class="accident-icon-container">
                             <img src="img/accident_icon.svg" class="accident-icon"/>
@@ -189,41 +246,45 @@
                         <img src="img/spot/karte_fuerfeld.svg"/>
                     </div>
                 </li>
-                <li class="card">
+                <li class="card col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="card-content">
-                        <h3>Staus haben extrem zugenommen</h3>
+                        <h3>Unfallrisiko Stau</h3>
 
-                        <p> Die A6 ist hinter der A8 und der A81 die staureichste Autobahn Baden-Württembergs.
-                            Bis zum 25. Juni gab es laut ADAC im Jahr 2014 3851 Meldungen über Staus oder
-                            stockenden Verkehr auf der A6. Gegenüber dem Jahr 2013 bedeutet dies eine Steigerung von
-                            31%.</p>
-
-                        <div id="chart-fuerfeld-traffic"></div>
+                        <p>Fürfeld ist ein weiterer Bereich entlang der A6, an dem es häufig zu Unfällen kommt.</p>
                     </div>
                 </li>
-                <li class="card">
+                <li class="card col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="card-content">
-                        <p>Noch schlimmer sieht es bei den Staukilometern aus, dort ergibt sich mit 11581 km eine
-                            Steigerungsrate um ca. 52 % gegenüber dem Vorjahr.</p>
+                        <p>Eine Unfallursache sind Staus: Die A6 ist hinter der A8 und der A81 die <strong>staureichste
+                            Autobahn</strong>
+                            Baden-Württembergs. Bis zum 25. Juni gab es laut ADAC im Jahr 2014 3.851 Meldungen über
+                            Staus oder stockenden Verkehr auf der A6. Gegenüber dem Jahr 2013 bedeutet dies eine
+                            Steigerung von 31%.
+                        </p>
+
+                        <div id="chart-fuerfeld-traffic"></div>
+
+                    </div>
+                </li>
+                <li class="card col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="card-content">
+                        <p>
+                            Noch schlimmer sieht es bei den Staukilometern aus, dort ergibt sich mit 11581 km eine
+                            Steigerungsrate um ca. 52 % gegenüber dem Vorjahr.
+                        </p>
 
                         <div id="chart-fuerfeld-traffic-km"></div>
                     </div>
                 </li>
-                <li class="card">
+                <li class="card col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="card-content">
-                        <p>Unterstrichen wird dies, durch die
-                            extreme Steigerung der Anzahl der Staus über 10km Staulänge, 140 Staus ergeben eine
-                            Steigerungsrate von ca. 70 %.</p>
-
-                        <div id="chart-fuerfeld-traffic-10km"></div>
-                    </div>
-                </li>
-                <li class="card">
-                    <div class="card-content">
-                        Besonders betroffen ist der Abschnitt Mannheim – Heilbronn. Auf diesem Abschnitt wurden
-                        3362 Meldungen gezählt, das sind 38% mehr als im Vorjahr. Für die A6 in
-                        Baden-Württemberg bedeutet das, dass rund 87% aller Staus auf der A6 zwischen Heilbronn
-                        und Mannheim gezählt werden.
+                        <p>
+                            Besonders betroffen ist der Abschnitt Mannheim - Heilbronn, in dem auch Fürfeld liegt. Auf
+                            diesem Abschnitt wurden 3362 Meldungen gezählt, das sind 38% mehr als im Vorjahr. Für die A6
+                            in Baden-Württemberg bedeutet das, dass <strong>rund 87% aller Staus</strong> auf der A6
+                            zwischen Heilbronn
+                            und Mannheim gezählt werden. Keine guten Vorraussetzungen für eine unfallfreie Fahrt.
+                        </p>
                     </div>
                 </li>
             </ul>
@@ -233,10 +294,10 @@
 <div class="pane">
     <div class="spot-content cards" id="spot-neckartalbruecke">
         <div class="card-scroller">
-            <ul class="card-list list-unstyled">
-                <li class="card card-teaser">
+            <ul class="card-list list-unstyled row">
+                <li class="card card-teaser col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="spot-title-container">
-                        <img src="img/spot/neckartalbruecke.jpg"/>
+                    <img src="img/spot/neckartalbruecke.jpg"/>
 
                         <div class="accident-icon-container">
                             <img src="img/accident_icon.svg" class="accident-icon"/>
@@ -252,73 +313,79 @@
                         <img src="img/spot/karte_neckartalbruecke.svg"/>
                     </div>
                 </li>
-                <li class="card">
+                <li class="card col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="card-content">
-                        <h3>Sorgenkind der Region</h3>
-                        Die Neckartalbrücke ist das Sorgenkind der Region. Der 1,3 Kilometer lange Koloss ist in die
+                        <h3>Nadelöhr Brücke</h3>
+                        Die Neckartalbrücke ist das <strong>Sorgenkind</strong> der Region. Der 1,3 Kilometer lange
+                        Koloss ist in die
                         Jahre gekommen. Zuletzt fuhren täglich mehr als 100.00 Autos und 25.000 Lastwagen über die
-                        Brücke. Zu viel für das Bauwerk. Im Oktober vergangenen Jahres musste der Verkehr von drei auf
-                        zwei Fahrspuren verengt werden, um das Gewicht, das die Brücke tragen muss, zu verringern. Die
+                        Brücke. Zu viel für das Bauwerk. Im Oktober vergangenen Jahres musste der Verkehr von drei
+                        <strong>auf
+                            zwei Fahrspuren verengt</strong> werden, um das Gewicht, das die Brücke tragen muss, zu
+                        verringern. Die
                         Folge: permanente Staus, gerade in den Stoßzeiten.
                     </div>
                 </li>
-                <li class="card">
+                <li class="card col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="card-content">
-                        Die Staus sind ein Unfallrisiko. Laut Polizei ereigneten sich 2013 11,6 Prozent der A6-Unfälle
-                        am
-                        Stauende. Und das ist nur die Spitze des Eisbergs: Kleinstunfälle sind dabei nicht mit
-                        einberechnet.
-                        „Es reicht, wenn eine Fahrspur durch einen Kleinstunfall gesperrt ist. Dann haben wir einen
-                        Verkehrskollaps“, sagt Helmut Wacker, Leiter der Verkehrspolizei in Weinsberg.
-                        Besonders an den Anschlussstellen Untereisesheim und Neckarsulm - also vor und nach der
-                        Neckartalbrücke - kracht es häufig.
+                        Die Staus sind ein <strong>Unfallrisiko</strong>. Laut Polizei Heilbronn ereigneten sich 2013
+                        11,6 Prozent der A6-Unfälle am Stauende. Und das ist nur die Spitze des Eisbergs: Kleinstunfälle
+                        sind dabei nicht mit einberechnet.
                     </div>
                 </li>
-                <li class="card">
+                <li class="card col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="card-content">
-                        <p>Unfallzunahme im Bereich Neckartalbrücke</p>
+                        <blockquote>
+                            <p>Es reicht, wenn eine Fahrspur durch einen Kleinstunfall gesperrt ist. Dann haben wir
+                                einen <strong>Verkehrskollaps</strong>.</p>
+                            <footer>Helmut Wacker, Leiter der Verkehrspolizei in Weinsberg</footer>
+                        </blockquote>
+                    </div>
+                </li>
+                <li class="card col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="card-content">
+                        <p>Besonders an den Anschlussstellen Untereisesheim und Neckarsulm - also vor und nach der
+                            Neckartalbrücke - kracht es häufig. </p>
 
                         <div id="chart-neckartalbruecke-accidents"></div>
                     </div>
                 </li>
-                <li class="card">
+                <li class="card col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="card-content">
-                        Mitte Mai hat die zuständige Verkehrsbehörde beim Regierungspräsidium Stuttgart mit Vertretern
-                        von Polizei und Autobahnmeistereien hier eine Verkehrschau durchgeführt. Wesentliche
-                        Unfallursachen in beiden Fahrtrichtungen waren die sogenannte “nicht angepasste
-                        Geschwindigkeit”. Es hat sich gezeigt, dass sich die Verkehrsteilnehmer mit ihrer
-                        Geschwindigkeit nicht immer genügend auf die dortigen, häufiger auftretenden Staubildungen
-                        insbesondere zu den sog. "rush hour - Zeiten" einstellen.
+                        Mitte Mai hat die Verkehrsbehörde beim Regierungspräsidium Stuttgart mit Vertretern der Polizei
+                        hier eine <strong>Verkehrschau</strong> durchgeführt. Wesentliche Unfallursachen in beiden
+                        Fahrtrichtungen seien
+                        die sogenannte “nicht angepasste Geschwindigkeit”. Es hat sich gezeigt, dass sich die
+                        Verkehrsteilnehmer mit ihrer Geschwindigkeit nicht immer genügend auf die Staus insbesondere zur
+                        Rush Hour einstellen.
                     </div>
                 </li>
-                <li class="card">
+                <li class="card col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="card-content">
-                        <p>Als Abhilfemaßnahmen hat man in Fahrtrichtung Mannheim die Fahrbahnmarkierungen bereits
-                            geändert, sodass an der Anschlussstelle Heilbronn/Neckarsulm ausfahrende Verkehrsteilnehmer
-                            ab
-                            Weinsberg direkt den rechten Fahrstreifen benutzen können. Das reduziert laut
-                            Regierungspräsidium Verflechtungsvorgänge.</p>
+                        <p>Als Abhilfemaßnahmen hat man in Fahrtrichtung Mannheim die
+                            <strong>Fahrbahnmarkierungen</strong> geändert. An
+                            der Anschlussstelle Heilbronn/Neckarsulm können ausfahrende Verkehrsteilnehmer nun ab
+                            Weinsberg direkt den rechten Fahrstreifen benutzen. Das reduziert laut Regierungspräsidium
+                            <strong>Verflechtungsvorgänge</strong>. In Fahrtrichtung Nürnberg sollen auch die Ausfahrten
+                            verlängert
+                            werden, um die Stausituationen zu entschärfen.
+                        </p>
 
-                        <p>In Fahrtrichtung Nürnberg sollen auch die Ausfahrten verlängern, um die Stausituationen auf
-                            der
-                            Hauptfahrbahn zu entschärfen.</p>
+                        <img src="img/spot/neckartalbruecke_plan.jpg"/>
+
+                        <p>Visualisierung der geplanten Neckarbrücke</p>
+
+                        <p>
+                            <em>Leonhardt, Andrä und Partner</em>
+                        </p>
                     </div>
                 </li>
-                <li class="card">
+                <li class="card col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="card-content">
                         Doch der Bereich Neckartalbrücke wird das Sorgenkind bleiben. Geht die Brücke ganz kaputt,
                         müsste der Verkehr gar auf eine Spur verringert werden. „Das müssen wir verhindern“, sagt
                         Wacker. „Das wäre der Gau. Die Umleitungsstrecken könnten das nicht mehr tragen.“ Frühestens
-                        2016 soll die Neckartalbrücke neu gebaut werden - bei laufendem Betrieb.
-                    </div>
-                </li>
-                <li class="card">
-                    <div class="card-content">
-                        Nur 3,9 Prozent aller Autobahnunfälle 2013 auf der A6 (Bereich PP Heilbronn) sind innerhalb
-                        einer Baustelle passiert. Aber: Das ist nur die “Spitze des Eisbergs” (Zitat Feucht) - 50
-                        Prozent aller Unfälle sind Kleinunfälle, die nicht maschinell erfasst werden, darunter sind
-                        viele Auffahrunfälle innerhalb von Baustellen und Staus.
-                        11,6 Prozent der erfassten Unfälle im PP Heilbronn (A6, 2013) ereigneten sich am Stauende.
+                        2016 soll die Neckartalbrücke <strong>neu gebaut</strong> werden - bei laufendem Betrieb.
                     </div>
                 </li>
             </ul>
@@ -328,10 +395,10 @@
 <div class="pane">
     <div class="spot-content cards" id="spot-weinsberg">
         <div class="card-scroller">
-            <ul class="card-list list-unstyled">
-                <li class="card card-teaser">
+            <ul class="card-list list-unstyled row">
+                <li class="card card-teaser col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="spot-title-container">
-                        <img src="img/spot/weinsberger_kreuz.jpg"/>
+                    <img src="img/spot/weinsberger_kreuz.jpg"/>
 
                         <div class="accident-icon-container">
                             <img src="img/accident_icon.svg" class="accident-icon"/>
@@ -347,21 +414,56 @@
                         <img src="img/spot/karte_weinsberg.svg"/>
                     </div>
                 </li>
-                <li class="card">
+                <li class="card col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="card-content">
-                        <h3>Verkehrsknoten der Region</h3>
-                        Wenn die A6 die Verkehrsader der Region ist, ist das Weinsberger Kreuz das pulsierende Herz. Es
-                        ist die Verbindung zum Süden und Norden, zur A81 in Richtung München und Nürnberg.
+                        <h3>Erhöhtes Verkehrsaufkommen</h3>
+                        Wenn die A6 die Verkehrsader der Region ist, ist das Weinsberger Kreuz das pulsierende Herz. Von
+                        hier aus gehen die <strong>Verkehrsströme</strong> in Richtung der Metropolregion Rhein-Neckar,
+                        nach Nürnberg,
+                        Stuttgart und Würzburg.
                     </div>
                 </li>
-                <li class="card">
+                <li class="card col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="card-content">
-                        <p>Zwischen Pleidelsheim und Neuenstadt verändert sich das Verkehrsaufkommen enorm. Ein
-                            entscheidender
-                            Grund ist die A6. Sie zieht wie ein Staubsauger Verkehr von der A81 in Richtung Norden
-                            ab.</p>
-
                         <div id="chart-weinsberg-flow"></div>
+                        <p>
+                            <em>*Für diese Grafik wurden die Daten der Dauerzählstellen ausgewertet, Quelle: BAST</em>
+                        </p>
+                    </div>
+                </li>
+                <li class="card col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="card-content">
+                        <p>Zwischen Pleidelsheim und Neuenstadt verändert sich das Verkehrsaufkommen enorm. Die A6 zieht
+                            wie ein Staubsauger Verkehr von der A81 in Richtung Norden ab.
+                        </p>
+
+                        <blockquote>
+                            <p>Am Weinsberger Kreuz trifft die A81 auf die A6, die die Transportströme nach Westen und
+                                Osten weiter verteilt.</p>
+                            <footer>Tomás Bayón, German Graduate School</footer>
+                        </blockquote>
+                    </div>
+                </li>
+                <li class="card col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="card-content">
+                        Dazu kommt der Pendlerverkehr. Die Verdichtung des Verkehrsaufkommens in der Region belegen auch
+                        die Zulassungszahlen. In den vergangenen drei Jahren stiegen diese deutlich an:
+                    </div>
+                </li>
+                <li class="card col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="card-content">
+                        <blockquote>
+                            <p>Problematisch für die Region ist, dass im Gegensatz zu anderen innerdeutschen
+                                West-Ost-Verbindungen wie der A2 und A4 noch keine durchgängig grundlegende <strong>Modernisierung</strong>
+                                der A6 stattgefunden hat, was leider viele Staus nach sich zieht.</p>
+                            <footer>Tomás Bayón, German Graduate School</footer>
+                        </blockquote>
+                    </div>
+                </li>
+                <li class="card col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="card-content">
+                        Viel Verkehr, viele Spurwechsel, viele Staus: Diese Faktoren sind ausschlaggebend dafür, dass am
+                        Weinsberger Kreuz mehr Unfälle passieren, als in anderen Bereichen der A6.
                     </div>
                 </li>
             </ul>
@@ -371,10 +473,10 @@
 <div class="pane">
     <div class="spot-content cards" id="spot-hohenlohe">
         <div class="card-scroller">
-            <ul class="card-list list-unstyled">
-                <li class="card card-teaser">
+            <ul class="card-list list-unstyled row">
+                <li class="card card-teaser col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="spot-title-container">
-                        <img src="img/spot/hohenlohe.jpg"/>
+                    <img src="img/spot/hohenlohe.jpg"/>
 
                         <div class="accident-icon-container">
                             <img src="img/accident_icon.svg" class="accident-icon"/>
@@ -390,53 +492,51 @@
                         <img src="img/spot/karte_hohenlohe.svg"/>
                     </div>
                 </li>
-                <li class="card">
+                <li class="card col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="card-content">
                         <h3>Verkehrskollaps auf Umleitungsstrecken</h3>
                         Auf dem Streckenabschnitt zwischen Weinsberger Kreuz und Öhringen gab es in den vergangenen
-                        Monaten
-                        mehrere schwere Lkw-Unfälle. Die Autobahn war teilweise stundenlang gesperrt, die
-                        Umleitungsstrecken
-                        kollabierten.
+                        Monaten mehrere schwere Lkw-Unfälle. Die Autobahn war teilweise stundenlang gesperrt, die
+                        <strong>Umleitungsstrecken</strong> kollabierten. Auf eine Zunahme an Unfällen in diesem Bereich
+                        deuten die Daten
+                        allerdings nicht hin.
                     </div>
                 </li>
-                <li class="card">
+                <li class="card col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="card-content">
-                        Zwar herrscht hier weniger Verkehr als bei Neckarsulm. Der Streckenabschnitt weist aber an der
-                        Zählstelle bei Schwabbach einen extrem hohen Schwerverkehrsanteil (22,6 Prozent) auf. Mindestens
-                        jedes fünfte Fahrzeug ist ein Lkw. Auf der A81 bei Pleidelsheim ist nur zehnte Fahrzeug ein Lkw.
-                        CHART von 5. Seite (Weinsberger Kreuz) wdh.
+                        Auf diesem Teil der A6 herrscht weniger Verkehr als bei Neckarsulm. Der Streckenabschnitt weist
+                        aber an der Zählstelle bei Schwabbach einen extrem <strong>hohen Schwerverkehrsanteil</strong>
+                        (22,6 Prozent)
+                        auf. Mindestens jedes fünfte Fahrzeug ist ein Lkw. Zum Vergleich: Auf der A81 bei Pleidelsheim
+                        ist nur zehnte Fahrzeug ein Lkw.
                     </div>
                 </li>
-                <li class="card">
+                <li class="card col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="card-content">
-                        Die Daten zeigen: Wo Lkws an Unfällen beteiligt sind… Schwere Unfälle führen zu stundenlangen
-                        Streckensperrungen. Der Verkehr muss ausgeleitet werden. Aber die Umleitungsstrecken können den
-                        A6-Verkehr nicht bewältigen. Die Straßen sind nicht für diesen Verkehr ausgelegt
+                        Die Unfalldaten zeigen: Wenn Lkws an Unfällen beteiligt sind, sind die Opfer häufiger <strong>schwer
+                        verletzt</strong>. Solche schweren Unfälle erfordern umfangreiche Rettungsmaßnahmen und führen
+                        zu
+                        stundenlangen <strong>Streckensperrungen</strong>. Der Verkehr muss ausgeleitet werden. Aber die
+                        Umleitungsstrecken können den A6-Verkehr nicht bewältigen. Die Straßen sind nicht für diesen
+                        Verkehr ausgelegt
                     </div>
                 </li>
-                <li class="card">
+                <li class="card col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="card-content">
                         <p>
                             Nach wissenschaftlichen Berechnungen kann eine Spur Autobahn im Schnitt 1800 Fahrzeuge in
-                            der
-                            Stunde aufnehmen (bei einem Schwerverkehrsanteil von 10 Prozent). Eine normale Straße
-                            bewältigt
-                            nur
-                            1000 Fahrzeuge in der Stunde.
+                            der Stunde aufnehmen (bei einem Schwerverkehrsanteil von 10 Prozent). Eine normale Straße
+                            bewältigt nur 1000 Fahrzeuge in der Stunde.
                             Kein Wunder, dass die Umleitungsstrecken in der Region regelmäßig überlastet sind.
                         </p>
 
                         <div id="chart-hohenlohe-capacity"></div>
                     </div>
                 </li>
-                <li class="card">
+                <li class="card col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="card-content">
-                        evtl. Map, welche Strecken regelmäßig betroffen sind von Umleitungen
-                    </div>
-                </li>
-                <li class="card">
-                    <div class="card-content">
+                        Davon sind in Hohenlohe vor allem die Öhringen und Neuenstein mit den umliegenden Orten
+                        betroffen.
                         Lösungen? A6-Ausbau
                     </div>
                 </li>
@@ -445,25 +545,84 @@
     </div>
 </div>
 <div class="pane">
-    <div class="cards" id="conclusion">
+    <div class="spot-content cards" id="conclusion">
         <div class="card-scroller">
-            <ul class="card-list list-unstyled">
-                <li class="card card-teaser">
-                    <img src="img/spot/steinsfurt.jpg"/>
+            <ul class="card-list list-unstyled row">
+                <li class="card card-teaser col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <img src="img/spot/steinsfurt.jpg"/>
+                </li>
+                <li class="card col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="card-content">
+                        <h3>Fazit - Autobahn Allgemein</h3>
 
-                    <div class="card-teaser-text">
-                        <h2>Fazit</h2>
-
-                        Auf der baden-württembergischen A6 starben 21 Menschen in mehr als vier Jahren.
-
-                        Innerhalb der von uns untersuchten Unfallschwerpunkte starben 15 Menschen. Jeder Tote ist einer
-                        zu viel. Dennoch: Laut Polizei sterben im übrigen Straßenverkehr weit mehr Menschen als bei
-                        Unfällen auf der Autobahn. Innerhalb des Stadtgebiets Heilbronn gab es in diesem Jahr allein xx
-                        Tote bei Verkehrsunfällen.
+                        Immer mehr Unfälle. Dieses subjektive Empfinden hat die A6-Analyse nicht bestätigt. Eine leichte
+                        Zunahme zeigt sich nur im Bereich der Neckartalbrücke. Hier hat die Polizei reagiert und die
+                        Fahrbahnmarkierungen geändert, um Stau vorzubeugen. Laut Regierungspräsidium zeigt diese
+                        Maßnahme bereits Wirkung. (Sie haben andere Erfahrungen? <a href="mail:online@stimme.de">Dann
+                        schreiben Sie uns!</a>
                     </div>
                 </li>
-                <li class="card">
+                <li class="card col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="card-content">
+                        <blockquote>
+                            <p>Verglichen mit den Vorjahren ist die Situation auf der A6 nicht auffälliger.</p>
+                            <footer>Helmut Wacker, Leiter der Verkehrspolizei in Weinsberg</footer>
+                        </blockquote>
+                        <p>
+                            Mit einer Ausnahme: In den ersten vier Monaten des Jahres, gab es besonders <strong>viele
+                            schwere
+                            Lkw-Unfälle</strong> – 23 an der Zahl. Im gesamten vergangenen Jahr waren es 14, 2012 gar
+                            nur zehn
+                            schwere Lkw-Unfälle.
+                        </p>
+                    </div>
+                </li>
+                <li class="card col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="card-content">
+                        Wie die Analyse gezeigt hat, ist der Bereich der A6 von Sinsheim bis Öhringen stark
+                        frequentiert. Der Schwerverkehrsanteil ist überdurchschnittlich hoch. Und an jedem dritten
+                        Unfall ist ein Lkw beteiligt. Die Daten zeigen auch: Wo Lkw verwickelt sind, sind die Unfälle
+                        meist schwerer.
+                    </div>
+                </li>
+                <li class="card col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="card-content">
+                        <p>Schwere Unfälle ziehen einen Rattenschwanz hinter sich her: Staus, Bergungen, Sperrungen.
+                            Dadurch sind nicht nur die Menschen auf der Autobahn von den Unfällen betroffen, sondern
+                            auch
+                            die <strong>umliegenden Kommunen</strong>. Umleitungsstrecken sind überlastet, der Verkehr
+                            kollabiert.</p>
+
+                        <p>Häufige Unfallursache: <strong>Lkw-Fahrer</strong>, die zu wenig Abstand halten. Das
+                            Feindbild Lkw-Fahrer ist
+                            auf der Straße wie in den sozialen Netzwerken ein oft beobachtbares Phänomen. Dabei sorgen
+                            gerade die Brummi-Fahrer mit für den Wohlstand in der Region.
+                        </p>
+
+                        <blockquote>
+                            <p>Heilbronn-Franken ist die Region der Weltmarktführer und somit stark exportorientiert.
+                                Besonders wichtige Exportländer sind dabei unsere Nachbarn im Westen und Osten.</p>
+                            <footer>Tomás Bayón, German Graduate School</footer>
+                        </blockquote>
+                    </div>
+                </li>
+                <li class="card col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="card-content">
+                        Auf der baden-württembergischen A6 starben seit 2010 23 Menschen. Davon kamen 17 in dem von uns
+                        untersuchten Streckenabschnitt Sinsheim-Öhringen ums Leben. Jeder Tote ist einer zu viel. Und
+                        doch muss man an dieser Stelle auch eine andere Statistik in den Blick nehmen: Die <strong>Zahl
+                        der
+                        Getöteten</strong> im Straßenverkehr ist seit Jahrzehnten rückläufig. Auf eine Million
+                        gefahrener
+                        Streckenkilometer kommen im Schnitt fünf Tote. Betrachtet man nur die Autobahn, sind es 1,7
+                        Tote. Damit gilt die Autobahn als sicherste Straße in Deutschland. Die A6 ist dabei keine
+                        Ausnahme.
+                    </div>
+                </li>
+                <li class="card col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="card-content">
+                        Im Rahmen dieses Projektes werden wir die A6 auch abseits der Zahlen und Daten in den Blick
+                        nehmen und ausführlich in der Heilbronner Stimme und auf Stimme.de berichten.
                     </div>
                 </li>
             </ul>
@@ -473,21 +632,20 @@
 </div>
 </div>
 </div>
+</div>
+</div>
 
 <!-- build:js js/app.min.js -->
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/iscroll/build/iscroll.js"></script>
-<script src="bower_components/iscroll/build/iscroll-infinite.js"></script>
 <script src="bower_components/modernizr/modernizr.js"></script>
 <script src="bower_components/d3/d3.js"></script>
-<script src="bower_components/hammerjs/hammer.js"></script>
 <script src="js/app.js"></script>
 <script src="js/scroll.js"></script>
 <script src="js/chart-overview-trucks.js"></script>
 <script src="js/chart-steinsfurt-truck-accidents.js"></script>
 <script src="js/chart-fuerfeld-traffic.js"></script>
 <script src="js/chart-fuerfeld-traffic-km.js"></script>
-<script src="js/chart-fuerfeld-traffic-10km.js"></script>
 <script src="js/chart-neckartalbruecke-accidents.js"></script>
 <script src="js/chart-hohenlohe-capacity.js"></script>
 <script src="js/chart-weinsberg-flow.js"></script>
@@ -496,5 +654,23 @@
     $(function () {
         app.init();
     });
+</script>
+<script>
+    if (window.location.hostname === "a6.stimme.de") {
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-52745604-1', 'auto');
+        ga('send', 'pageview');
+    }
 </script>
 </body>
