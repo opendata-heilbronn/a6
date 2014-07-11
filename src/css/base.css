@@ -16,6 +16,33 @@ a {
     cursor: pointer;
 }
 
+blockquote {
+    padding: 0;
+    border-left: none;
+    border-bottom: 1px solid #E1E1E1;
+}
+
+.blockquote-single {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+blockquote p {
+    display: block;
+    border-bottom: 1px solid #E1E1E1;
+    font-style: italic;
+    font-size: 14px;
+    padding-bottom: 14px;
+}
+
+blockquote footer:before {
+    content: '';
+}
+
+blockquote footer {
+    padding-bottom: 14px;
+}
+
 .pane {
     float: left;
     width: 12.5%;
