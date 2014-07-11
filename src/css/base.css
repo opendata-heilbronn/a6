@@ -60,7 +60,8 @@ blockquote footer {
 .fullscreen-content {
     min-height: 100%;
     height: 100%;
-    width: 100%;
+    max-width: 989px;
+    margin: 0 auto;
     position: relative;
     overflow: hidden;
 }
@@ -152,30 +153,14 @@ h2 small {
     height: 24px;
 }
 
-@media (min-width: 992px) {
-    .panes-col {
-        padding: 50px 50px 100px 0;
-    }
-
-    /* .pane {
-        background: none;
-    }
-    body {
-        background: url('../img/bg.jpg');
-        background-position: bottom;
-    } */
+.panes-col {
+    padding: 0;
 }
 
-@media (max-width: 991px) {
-    .panes-col {
-        padding: 0;
-    }
+.card-list {
+    margin: 0;
+}
 
-    .card-list {
-        margin: 0;
-    }
-
-    .card {
-        padding: 0;
-    }
+.card {
+    padding: 0;
 }
