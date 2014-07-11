@@ -42,7 +42,7 @@ module.exports = function (grunt) {
                         dot: true,
                         cwd: 'src/',
                         dest: 'dist/',
-                        src: ['*.{ico,txt,html}', 'img/{,*/}*.{gif}', 'fonts/*']
+                        src: ['*.{ico,txt,html}', 'img/{,*/}*.{gif,svg}', 'fonts/*']
                     }
                 ]
             }
