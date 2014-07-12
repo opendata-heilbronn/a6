@@ -12,7 +12,7 @@
     };
 
     var activatePaneScrolling = function () {
-        var currentPaneId = null, cardScroll = null;
+        var currentPaneId = null, cardScroll = null, desktop = $('.desktop').length;
 
         var paneScroll = new IScroll('.panes', {
             scrollX: true,
@@ -20,10 +20,14 @@
             momentum: false,
             snap: true,
             snapSpeed: 200,
-            keyBindings: true
+            keyBindings: true,
+            eventPassthrough: true
         });
 
         paneScroll.on('scrollEnd', function () {
+            if (desktop > 0) {
+                return true;
+            }
             var paneId = $('.panes').find('.cards').eq(this.currentPage.pageX).attr('id');
             if (paneId !== currentPaneId) {
                 if (cardScroll !== null) {

@@ -1,6 +1,7 @@
 #welcome-screen {
-    max-width: 1770px;
+    max-width: 2400px;
     margin: 0 auto;
+    z-index: 30;
 }
 
 .intro-box {

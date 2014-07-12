@@ -4,17 +4,19 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <!-- build:css css/app.desktop.min.css -->
     <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
     <link href="bower_components/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet"/>
+    <link href="css/base.css" rel="stylesheet"/>
     <link href="css/base.desktop.css" rel="stylesheet"/>
     <link href="css/intro.css" rel="stylesheet"/>
     <link href="css/intro.desktop.css" rel="stylesheet"/>
+    <link href="css/spots.css" rel="stylesheet"/>
     <!-- endbuild -->
     <title>Bundesautobahn 6 Unfallschwerpunkte</title>
 </head>
-<body>
+<body class="desktop">
 
 <nav class="navbar navbar-default hidden-xs hidden-sm">
     <div class="container-fluid">
@@ -28,37 +30,82 @@
     </div>
 </nav>
 
-<div id="welcome-screen">
-    <div class="intro-bg-top">
-        <div class="row row-intro-bg">
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 intro-bg intro-bg-1"></div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 intro-bg intro-bg-2"></div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 intro-bg intro-bg-3"></div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 intro-bg intro-bg-4"></div>
-        </div>
-    </div>
-    <div class="intro-bg-bottom">
-        <div class="row row-intro-bg">
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 intro-bg intro-bg-5"></div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 intro-bg intro-bg-6"></div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 intro-bg intro-bg-7"></div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 intro-bg intro-bg-8"></div>
-        </div>
-    </div>
-    <div class="intro-box">
-        <div class="intro-text">
-            <h1>Die A6</h1>
-            <br/>
-            <span>Unfälle, Baustellen, Staus - Eine Analyse</span>
-        </div>
-        <img class="explain-slide" src="img/intro/start.svg"/>
-    </div>
+<nav id="spot-nav" style="display:none">
+    <img src="img/spot/karte_steinsfurt.svg" class="spot-nav-map"/>
+    <ul class="spot-list">
+        <li>
+            <img src="img/accident_icon.svg" class="spot-accident-icon"/>
+
+            <p>Sinsheim-Steinsfurt</p>
+        </li>
+    </ul>
+</nav>
+
+<div class="panes fullheight">
+    <ul class="pane-scroller list-unstyled">
+        <li class="pane">
+            <div class="pane-content">
+                <div id="welcome-screen">
+                    <div class="intro-bg-top">
+                        <div class="row row-intro-bg">
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 intro-bg intro-bg-1"></div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 intro-bg intro-bg-2"></div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 intro-bg intro-bg-3"></div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 intro-bg intro-bg-4"></div>
+                        </div>
+                    </div>
+                    <div class="intro-bg-bottom">
+                        <div class="row row-intro-bg">
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 intro-bg intro-bg-5"></div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 intro-bg intro-bg-6"></div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 intro-bg intro-bg-7"></div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 intro-bg intro-bg-8"></div>
+                        </div>
+                    </div>
+                    <div class="intro-box">
+                        <div class="intro-text">
+                            <h1>Die A6</h1>
+                            <br/>
+                            <span>Unfälle, Baustellen, Staus - Eine Analyse</span>
+                        </div>
+                        <img class="explain-slide" src="img/intro/start.svg"/>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="pane">
+            <div class="pane-content">
+            </div>
+        </li>
+        <li class="pane">
+            <div class="pane-content">
+            </div>
+        </li>
+        <li class="pane">
+            <div class="pane-content">
+            </div>
+        </li>
+        <li class="pane">
+            <div class="pane-content">
+            </div>
+        </li>
+        <li class="pane">
+            <div class="pane-content">
+            </div>
+        </li>
+        <li class="pane">
+            <div class="pane-content">
+            </div>
+        </li>
+    </ul>
 </div>
 
 <!-- build:js js/app.desktop.min.js -->
 <script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/iscroll/build/iscroll.js"></script>
 <script src="bower_components/d3/d3.js"></script>
 <script src="js/app.js"></script>
+<script src="js/scroll.js"></script>
 <script src="js/chart-overview-trucks.js"></script>
 <script src="js/chart-steinsfurt-truck-accidents.js"></script>
 <script src="js/chart-fuerfeld-traffic.js"></script>
