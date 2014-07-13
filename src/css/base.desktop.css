@@ -37,18 +37,65 @@ body {
 
 #spot-nav {
     position: fixed;
-    top: 150px;
+    top: 100px;
     left: 50px;
     width: 25%;
-    background: rgba(0, 0, 0, 0.7);
     z-index: 20;
+    background: #484848;
 }
 
 .spot-nav-map {
     width: 100%;
     margin-bottom: 14px;
+    border-bottom: 1px solid #F0F0F0;
 }
 
 .spot-accident-icon {
     width: 50px;
+}
+
+.spot-list li {
+    color: #FFF;
+    display: block;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.spot-accident-icon {
+    display: block;
+    margin: 0 auto;
+}
+
+.pane-content {
+    padding: 50px 10% 50px 35%;
+}
+
+.spot-text {
+    background: #FFF;
+    padding: 36px;
+    max-width: 700px;
+}
+
+.spot-card-nav {
+    max-width: 700px;
+    padding: 8px;
+    background: #E0E0E0;
+    text-align: center;
+    position: relative;
+}
+
+.spot-card-nav-to-left {
+    position: absolute;
+    left: 8px;
+    top: 8px;
+}
+
+.spot-card-nav-to-right {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+}
+
+.chart {
+    margin-bottom: 1em;
 }

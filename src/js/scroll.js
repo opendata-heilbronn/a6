@@ -26,6 +26,7 @@
 
         paneScroll.on('scrollEnd', function () {
             if (desktop > 0) {
+                $('#spot-nav').toggle(this.currentPage.pageX > 0);
                 return true;
             }
             var paneId = $('.panes').find('.cards').eq(this.currentPage.pageX).attr('id');
