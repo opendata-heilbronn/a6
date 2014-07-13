@@ -35,7 +35,8 @@
         var yAxis = d3.svg.axis()
             .scale(y)
             .orient("left")
-            .tickFormat(d3.format(",.0f"));
+            .tickFormat(d3.format(",.0f"))
+            .ticks([5]);
 
         var svg = d3.select(containerSelector).append("svg")
             .attr("viewBox", "0 0 " + width + " " + height)
@@ -52,11 +53,6 @@
             return d.value;
         })]);
 
-        var colors = {
-            2013: '#fdae61',
-            2014: '#f46d43'
-        };
-
         containerGroup.append("g")
             .attr("class", "x axis")
             .attr("transform", "translate(0," + innerHeight + ")")
@@ -64,7 +60,18 @@
 
         containerGroup.append("g")
             .attr("class", "y axis")
-            .call(yAxis);
+            .call(yAxis)
+            .append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("y", 6)
+            .attr("dy", ".71em")
+            .style("text-anchor", "end")
+            .text("Staus");
+
+        var colors = {
+            2013: '#F4D75C',
+            2014: '#FBB758'
+        };
 
         var bars = containerGroup.selectAll(".bar")
             .data(data)
@@ -74,7 +81,7 @@
                 return x(d.label);
             })
             .attr("width", x.rangeBand())
-            .attr("y", function (d) {
+            .attr("y", function () {
                 return y(0);
             })
             .attr("height", 0)
@@ -96,13 +103,13 @@
                 });
             activated = true;
         };
+        $container.closest('.card').on('active', onActivation);
 
         var onResize = function () {
             var targetWidth = $container.width();
             svg.attr("height", Math.round(targetWidth / aspect));
         };
         $(window).on("resize", onResize);
-        $container.closest('.card').on('active', onActivation);
         onResize();
     };
 
