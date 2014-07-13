@@ -217,7 +217,13 @@ line.bar {
 }
 
 .area {
-    fill: steelblue;
+    fill: #4361C4;
+}
+
+.line {
+    stroke: #F0EA66;
+    fill: none;
+    stroke-width: 2px;
 }
 
 circle.windrose {

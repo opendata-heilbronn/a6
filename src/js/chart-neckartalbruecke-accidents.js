@@ -160,7 +160,7 @@
     var build = function () {
         var margin = {top: 10, right: 10, bottom: 20, left: 40},
             width = 300,
-            height = 156,
+            height = 300,
             innerWidth = width - margin.left - margin.right,
             innerHeight = height - margin.top - margin.bottom,
             aspect = width / height,
@@ -181,7 +181,8 @@
 
         var yAxis = d3.svg.axis()
             .scale(y)
-            .orient("left");
+            .orient("left")
+            .ticks([5]);
 
         var area = d3.svg.area()
             .x(function (d) {
@@ -190,7 +191,8 @@
             .y0(innerHeight)
             .y1(function (d) {
                 return y(d.value);
-            });
+            })
+            .interpolate('basis');
 
         var svg = d3.select(containerSelector).append("svg")
             .attr("viewBox", "0 0 " + width + " " + height)
@@ -212,10 +214,11 @@
             return d.value;
         })]);
 
-        containerGroup.append("path")
+        var areaPath = containerGroup.append("path")
             .datum(data)
             .attr("class", "area")
-            .attr("d", area);
+            .attr("d", area)
+            .attr("transform", "translate(0, 230) scale(0, 0)");
 
         containerGroup.append("g")
             .attr("class", "x axis")
@@ -224,7 +227,25 @@
 
         containerGroup.append("g")
             .attr("class", "y axis")
-            .call(yAxis);
+            .call(yAxis)
+            .append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("y", 6)
+            .attr("dy", ".71em")
+            .style("text-anchor", "end")
+            .text("Unfälle");
+
+        var activated = false;
+        var onActivation = function () {
+            if (activated) {
+                return true;
+            }
+            areaPath.transition()
+                .duration(300)
+                .attr("transform", "translate(0, 0) scale(1, 1)");
+            activated = true;
+        };
+        $container.closest('.card').on('active', onActivation);
 
         var onResize = function () {
             var targetWidth = $container.width();

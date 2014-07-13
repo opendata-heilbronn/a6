@@ -147,3 +147,7 @@ h2 small {
 .card {
     padding: 0;
 }
+
+.chart {
+    margin-bottom: 1em;
+}
