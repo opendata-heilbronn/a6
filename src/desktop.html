@@ -31,40 +31,40 @@
 </nav>
 
 <nav id="spot-nav" style="display:none">
-    <img src="img/spot/karte_steinsfurt.svg" class="spot-nav-map"/>
+    <img src="img/a6_europa_map.png" class="spot-nav-map"/>
     <ul class="spot-list list-unstyled">
         <li onclick="app.scroll.scrollTo(1);">
-        <img src="img/accident_icon.svg" class="spot-accident-icon"/>
+            <img src="img/accident_icon.svg" class="spot-accident-icon"/>
 
             <p>A6 als Teil der E50</p>
         </li>
         <li onclick="app.scroll.scrollTo(2);">
-        <img src="img/accident_icon.svg" class="spot-accident-icon"/>
+            <img src="img/accident_icon.svg" class="spot-accident-icon"/>
 
             <p>Sinsheim</p>
         </li>
         <li onclick="app.scroll.scrollTo(3);">
-        <img src="img/accident_icon.svg" class="spot-accident-icon"/>
+            <img src="img/accident_icon.svg" class="spot-accident-icon"/>
 
             <p>Fürfeld</p>
         </li>
         <li onclick="app.scroll.scrollTo(4);">
-        <img src="img/accident_icon.svg" class="spot-accident-icon"/>
+            <img src="img/accident_icon.svg" class="spot-accident-icon"/>
 
             <p>Neckartalbrücke</p>
         </li>
         <li onclick="app.scroll.scrollTo(5);">
-        <img src="img/accident_icon.svg" class="spot-accident-icon"/>
+            <img src="img/accident_icon.svg" class="spot-accident-icon"/>
 
             <p>Weinsberger Kreuz</p>
         </li>
         <li onclick="app.scroll.scrollTo(6);">
-        <img src="img/accident_icon.svg" class="spot-accident-icon"/>
+            <img src="img/accident_icon.svg" class="spot-accident-icon"/>
 
             <p>Hohenlohe</p>
         </li>
         <li onclick="app.scroll.scrollTo(7);">
-        <img src="img/accident_icon.svg" class="spot-accident-icon"/>
+            <img src="img/accident_icon.svg" class="spot-accident-icon"/>
 
             <p>Fazit</p>
         </li>
@@ -102,7 +102,7 @@
             </div>
         </li>
         <li class="pane" id="overview">
-        <div class="pane-content">
+            <div class="pane-content">
                 <nav class="spot-card-nav">
                     <div class="spot-card-nav-to-left">
                         <span class="glyphicon glyphicon-chevron-left"></span>
@@ -110,9 +110,11 @@
                     <div class="spot-card-nav-to-right">
                         <span class="glyphicon glyphicon-chevron-right"></span>
                     </div>
-                    Card 1 / 2
+                    <span class="spot-card-nav-current">Card 1 / 2</span>
                 </nav>
-                <div class="spot-text">
+                <div class="spot-text" data-card-id="1">
+                    <h2>Die A6 als Teil der E50</h2>
+
                     <p>Die Bundesautobahn 6 (A6) ist die bedeutendste Verkehrsader der Region Heilbronn-Franken - und
                         das
                         Drehkreuz Europas. Sie ist Teil der fast 5000 Kilometer langen Europastraße 50, die Paris mit
@@ -143,26 +145,119 @@
                     <p>Daten: Dauerzählstelle Neckarsulm I und Durchschnitt aller Zählstellen auf Bundesautobahnen,
                         BAST</p>
                 </div>
+                <div class="spot-text" data-card-id="2" style="display:none">
+                    <p>Wo viele Fahrzeuge verkehren, steigt das Risiko für Unfälle. In diesem Jahr gab es bereits viele
+                        schwere Verkehrsunfälle auf der A6 - vor allem mit Lkw-Beteiligung.</p>
+
+                    <p>Immer mehr Unfälle: Das ist auch das subjektive Gefühl unserer Leser, gerade in den sozialen
+                        Netzwerken. Diesen Eindruck haben wir zum Anlass genommen, die Unfall-Daten der vergangenen
+                        Jahre zu analysieren. Das Statistische Landesamt Baden-Württemberg hat uns einen Datensatz mit
+                        allen polizeilich erfassten Unfällen auf der A6 von Januar 2010 bis einschließlich April 2014
+                        zur Verfügung gestellt.</p>
+
+                    <p>Wir haben aus diesen Daten eine Unfallkarte gemacht. Und diese zeigt klare Abschnitte in unserem
+                        Verbreitungsgebiet, an denen es besonders häufig kracht: Sinsheim-Steinsfurt, Fürfeld, im
+                        Bereich der Neckartalbrücke, das Weinsberger Kreuz und Hohenlohe. In dieser A6-Analyse nehmen
+                        die fünf Unfallschwerpunkte unter die Lupe und wählen an jedem Schwerpunkt einen anderen Fokus:
+                        Welche Rolle spielt der Lkw-Verkehr? Ist der Stau zum Normalzustand geworden? Wo behindern
+                        Bauvorhaben den Verkehr? Welche Auswirkungen haben die Unfälle auf die Umleitungsstrecken?</p>
+                </div>
             </div>
         </li>
         <li class="pane">
             <div class="pane-content">
+                <nav class="spot-card-nav">
+                    <div class="spot-card-nav-to-left">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </div>
+                    <div class="spot-card-nav-to-right">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </div>
+                    Card 1 / 2
+                </nav>
+                <div class="spot-text">
+                    <h2>Viele LKW-Unfälle</h2>
+
+                    <p>Die A6 bei Sinsheim-Steinsfurt ist eine bekannte Stau- und Unfallstrecke. Auf dem hügeligen
+                        Abschnitt behindern behäbige Lkw den Verkehrsfluss. Es kommt es immer wieder zu
+                        Verkehrsbehinderungen und Auffahrunfällen.</p>
+
+                    <p>
+                        Die Daten zeigen: An fast 40 Prozent aller Unfälle im Bereich Sinsheim-Steinsfurt waren Lkw
+                        beteiligt. Kein Wunder: Der Schwerlastanteil auf der A6 ist im Vergleich zu anderen Autobahnen
+                        extrem hoch. Fast jedes fünfte Fahrzeug ist ein Lastwagen, wie die Auswertungen an der
+                        Dauerzählstelle Neckarsulm zeigen.
+                    </p>
+
+                    <div class="chart" id="chart-steinsfurt-truck-accidents"></div>
+                    <p><em>Quelle: BAST</em></p>
+                </div>
+                <div class="spot-text">
+                    <p>Bad Guys der A6?</p>
+
+                    <p>Doch wieso sind überproportional viele Lkw an Unfällen beteiligt? Sind die Lkw-Fahrer die Bad
+                        Guys der A6?</p>
+                </div>
             </div>
         </li>
         <li class="pane">
             <div class="pane-content">
+                <nav class="spot-card-nav">
+                    <div class="spot-card-nav-to-left">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </div>
+                    <div class="spot-card-nav-to-right">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </div>
+                    Card 1 / 1
+                </nav>
+                <div class="spot-text">
+                </div>
             </div>
         </li>
         <li class="pane">
             <div class="pane-content">
+                <nav class="spot-card-nav">
+                    <div class="spot-card-nav-to-left">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </div>
+                    <div class="spot-card-nav-to-right">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </div>
+                    Card 1 / 1
+                </nav>
+                <div class="spot-text">
+                </div>
             </div>
         </li>
         <li class="pane">
             <div class="pane-content">
+                <nav class="spot-card-nav">
+                    <div class="spot-card-nav-to-left">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </div>
+                    <div class="spot-card-nav-to-right">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </div>
+                    Card 1 / 1
+                </nav>
+                <div class="spot-text">
+                </div>
             </div>
         </li>
         <li class="pane">
             <div class="pane-content">
+                <nav class="spot-card-nav">
+                    <div class="spot-card-nav-to-left">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </div>
+                    <div class="spot-card-nav-to-right">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </div>
+                    Card 1 / 1
+                </nav>
+                <div class="spot-text">
+                </div>
             </div>
         </li>
     </ul>
@@ -174,6 +269,7 @@
 <script src="bower_components/d3/d3.js"></script>
 <script src="js/app.js"></script>
 <script src="js/scroll.js"></script>
+<script src="js/card-nav.js"></script>
 <script src="js/chart-overview-trucks.js"></script>
 <script src="js/chart-steinsfurt-truck-accidents.js"></script>
 <script src="js/chart-fuerfeld-traffic.js"></script>
@@ -186,6 +282,7 @@
 <script type="text/javascript">
     $(function () {
         app.init();
+        app.cardNav.init();
     });
 </script>
 </body>

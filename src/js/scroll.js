@@ -13,6 +13,17 @@
         });
     };
 
+    var spotNav = {
+        paneMaps: ['a6_europa_map.png', 'spot/karte_steinsfurt.svg', 'spot/karte_fuerfeld.svg', 'spot/karte_neckartalbruecke.svg', 'spot/karte_weinsberg.svg', 'spot/karte_hohenlohe.svg', 'spot/karte_hohenlohe.svg'],
+        update: function (paneNumber) {
+            $('#spot-nav').toggle(paneNumber > 0);
+            if (paneNumber > 0) {
+                var map = this.paneMaps[(paneNumber - 1)];
+                $('.spot-nav-map').attr('src', 'img/' + map);
+            }
+        }
+    };
+
     var activatePaneScrolling = function () {
         var currentPaneId = null, cardScroll = null, desktop = $('.desktop').length;
 
@@ -28,7 +39,7 @@
 
         paneScroll.on('scrollEnd', function () {
             if (desktop > 0) {
-                $('#spot-nav').toggle(this.currentPage.pageX > 0);
+                spotNav.update(this.currentPage.pageX);
                 return true;
             }
             var paneId = $('.panes').find('.cards').eq(this.currentPage.pageX).attr('id');

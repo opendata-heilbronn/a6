@@ -101,6 +101,7 @@
     right: 10px;
     top: 7.5%;
     height: 85%;
+    cursor: pointer;
     animation: inout 5s;
     animation-iteration-count: infinite;
     -webkit-animation: inout 5s; /* Safari & Chrome */
