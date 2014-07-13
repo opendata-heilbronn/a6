@@ -4,13 +4,57 @@
     var paneScroll;
 
     var buildCardScroll = function (selector) {
-        return new IScroll(selector, {
+        var $cards = $(selector).find('.card-list').children();
+        var cardOffsets = [];
+        $cards.each(function (index, card) {
+            var height = $(card).height();
+            cardOffsets.push($(card).offset().top * -1 - (height / 2));
+        });
+
+        var cardScroll = new IScroll(selector, {
             scrollX: false,
             scrollY: true,
             momentum: true,
-            scrollbar: true,
-            keyBindings: true
+            scrollbar: false,
+            keyBindings: true,
+            snap: 'li',
+            probeType: '2',
+            tap: true
         });
+
+        var activeCard = 0;
+
+        var setActiveCard = function (currentCard, triggerEvent) {
+            if (activeCard !== currentCard) {
+                if (activeCard > 1) {
+                    $cards.eq(activeCard).removeClass('active');
+                }
+                $cards.eq(currentCard).addClass('active');
+                activeCard = currentCard;
+            }
+            if (currentCard > 1 && triggerEvent) {
+                $cards.eq(currentCard).triggerHandler('active');
+            }
+        };
+
+        cardScroll.on('scroll', function () {
+            var currentCard = 0, y = this.y;
+            $.each(cardOffsets, function (index, offset) {
+                if (y > offset) {
+                    currentCard = index;
+                    return false;
+                }
+            });
+            setActiveCard(currentCard);
+        });
+        cardScroll.on('scrollEnd', function () {
+            setActiveCard(this.currentPage.pageY, true);
+        });
+        $cards.on('tap', function () {
+            cardScroll.goToPage(0, $(this).index(), 300);
+        });
+
+        return cardScroll;
     };
 
     var spotNav = {

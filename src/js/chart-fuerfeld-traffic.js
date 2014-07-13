@@ -14,9 +14,9 @@
 
     var containerSelector = '#chart-fuerfeld-traffic';
     var build = function () {
-        var margin = {top: 10, right: 10, bottom: 20, left: 40},
+        var margin = {top: 10, right: 10, bottom: 20, left: 50},
             width = 300,
-            height = 156,
+            height = 250,
             innerWidth = width - margin.left - margin.right,
             innerHeight = height - margin.top - margin.bottom,
             aspect = width / height,
@@ -35,7 +35,7 @@
         var yAxis = d3.svg.axis()
             .scale(y)
             .orient("left")
-            .tickFormat(d3.format(".2s"));
+            .tickFormat(d3.format(",.0f"));
 
         var svg = d3.select(containerSelector).append("svg")
             .attr("viewBox", "0 0 " + width + " " + height)
@@ -52,6 +52,11 @@
             return d.value;
         })]);
 
+        var colors = {
+            2013: '#fdae61',
+            2014: '#f46d43'
+        };
+
         containerGroup.append("g")
             .attr("class", "x axis")
             .attr("transform", "translate(0," + innerHeight + ")")
@@ -61,7 +66,7 @@
             .attr("class", "y axis")
             .call(yAxis);
 
-        containerGroup.selectAll(".bar")
+        var bars = containerGroup.selectAll(".bar")
             .data(data)
             .enter().append("rect")
             .attr("class", "bar")
@@ -70,17 +75,34 @@
             })
             .attr("width", x.rangeBand())
             .attr("y", function (d) {
-                return y(d.value);
+                return y(0);
             })
-            .attr("height", function (d) {
-                return innerHeight - y(d.value);
+            .attr("height", 0)
+            .attr("style", function (d) {
+                return 'fill:' + colors[d.label];
             });
+
+        var activated = false;
+        var onActivation = function () {
+            if (activated) {
+                return true;
+            }
+            bars.transition()
+                .attr("y", function (d) {
+                    return y(d.value);
+                })
+                .attr("height", function (d) {
+                    return innerHeight - y(d.value);
+                });
+            activated = true;
+        };
 
         var onResize = function () {
             var targetWidth = $container.width();
             svg.attr("height", Math.round(targetWidth / aspect));
         };
         $(window).on("resize", onResize);
+        $container.closest('.card').on('active', onActivation);
         onResize();
     };
 

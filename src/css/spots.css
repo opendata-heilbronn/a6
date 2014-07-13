@@ -25,6 +25,7 @@
 .card {
     margin: 16px 0;
     position: relative;
+    opacity: 0.55;
 }
 
 .card-content {

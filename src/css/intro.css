@@ -102,9 +102,9 @@
     top: 7.5%;
     height: 85%;
     cursor: pointer;
-    animation: inout 5s;
+    animation: inout 4s;
     animation-iteration-count: infinite;
-    -webkit-animation: inout 5s; /* Safari & Chrome */
+    -webkit-animation: inout 4s;
     -webkit-animation-iteration-count: infinite;
 }
 
@@ -124,7 +124,6 @@
 }
 
 @-webkit-keyframes inout {
-    /* Safari & Chrome */
     0% {
         -webkit-transform: translate(0, 0);
     }
