@@ -1,6 +1,8 @@
 (function (d3, app) {
     'use strict';
 
+    var paneScroll;
+
     var buildCardScroll = function (selector) {
         return new IScroll(selector, {
             scrollX: false,
@@ -14,7 +16,7 @@
     var activatePaneScrolling = function () {
         var currentPaneId = null, cardScroll = null, desktop = $('.desktop').length;
 
-        var paneScroll = new IScroll('.panes', {
+        paneScroll = new IScroll('.panes', {
             scrollX: true,
             scrollY: false,
             momentum: false,
@@ -44,8 +46,13 @@
         });
     };
 
+    var scrollTo = function (page) {
+        paneScroll.goToPage(page, 0, 300);
+    };
+
     app.scroll = {
-        'init': activatePaneScrolling
+        'init': activatePaneScrolling,
+        'scrollTo': scrollTo
     };
 })
 (d3, app);

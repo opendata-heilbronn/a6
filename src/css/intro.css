@@ -101,4 +101,39 @@
     right: 10px;
     top: 7.5%;
     height: 85%;
+    animation: inout 5s;
+    animation-iteration-count: infinite;
+    -webkit-animation: inout 5s; /* Safari & Chrome */
+    -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes inout {
+    0% {
+        transform: translate(0, 0);
+    }
+    80% {
+        transform: translate(0, 0) scale(1, 1);
+    }
+    90% {
+        transform: translate(10%, 0) scale(1.15, 1.15);
+    }
+    100% {
+        transform: translate(0, 0) scale(1, 1);
+    }
+}
+
+@-webkit-keyframes inout {
+    /* Safari & Chrome */
+    0% {
+        -webkit-transform: translate(0, 0);
+    }
+    80% {
+        -webkit-transform: translate(0, 0) scale(1, 1);
+    }
+    90% {
+        -webkit-transform: translate(10%, 0) scale(1.15, 1.15);
+    }
+    100% {
+        -webkit-transform: translate(0, 0) scale(1, 1);
+    }
 }
