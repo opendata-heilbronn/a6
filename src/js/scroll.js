@@ -32,7 +32,7 @@
                 $cards.eq(currentCard).addClass('active');
                 activeCard = currentCard;
             }
-            if (currentCard > 1 && triggerEvent) {
+            if (currentCard > 0 && triggerEvent) {
                 $cards.eq(currentCard).triggerHandler('active');
             }
         };

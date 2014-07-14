@@ -217,11 +217,17 @@ line.bar {
 }
 
 .area {
-    fill: #4361C4;
+    fill: #002D71;
 }
 
 .line {
     stroke: #F0EA66;
+    fill: none;
+    stroke-width: 2px;
+}
+
+.average {
+    stroke: #B0BAF5;
     fill: none;
     stroke-width: 2px;
 }
