@@ -33,9 +33,9 @@
 
     var containerSelector = '#chart-overview-trucks';
     var build = function () {
-        var margin = {top: 10, right: 10, bottom: 20, left: 40},
+        var margin = {top: 10, right: 10, bottom: 20, left: 60},
             width = 300,
-            height = 156,
+            height = 250,
             innerWidth = width - margin.left - margin.right,
             innerHeight = height - margin.top - margin.bottom,
             aspect = width / height,
@@ -50,7 +50,7 @@
             .range([innerHeight, 0]);
 
         var color = d3.scale.ordinal()
-            .range(["#ff8c00", "#6b486b"]);
+            .range(["#F1BC2B", "#C85F42"]);
 
         var xAxis = d3.svg.axis()
             .scale(x0)
@@ -59,7 +59,8 @@
         var yAxis = d3.svg.axis()
             .scale(y)
             .orient("left")
-            .tickFormat(d3.format(".2s"));
+            .tickFormat(d3.format(",.0f"))
+            .ticks([5]);
 
         var svg = d3.select(containerSelector).append("svg")
             .attr("viewBox", "0 0 " + width + " " + height)
