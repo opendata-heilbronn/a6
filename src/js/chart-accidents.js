@@ -66,8 +66,8 @@
                 return y(0);
             })
             .attr("height", 0)
-            .attr("style", function (d) {
-                return "fill: " + color(d.value);
+            .style("fill", function (d) {
+                return color(d.value);
             });
 
         containerGroup.append("g")

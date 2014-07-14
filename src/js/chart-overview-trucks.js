@@ -97,7 +97,7 @@
                 return "translate(" + x0(d.label) + ",0)";
             });
 
-        reference.selectAll("rect")
+        var bars = reference.selectAll("rect")
             .data(function (d) {
                 return d.vehicles;
             })
@@ -106,12 +106,10 @@
             .attr("x", function (d) {
                 return x1(d.label);
             })
-            .attr("y", function (d) {
-                return y(d.value);
+            .attr("y", function () {
+                return y(0);
             })
-            .attr("height", function (d) {
-                return innerHeight - y(d.value);
-            })
+            .attr("height", 0)
             .style("fill", function (d) {
                 return color(d.label);
             });
@@ -138,6 +136,22 @@
             .text(function (d) {
                 return d;
             });
+
+        var activated = false;
+        var onActivation = function () {
+            if (activated) {
+                return true;
+            }
+            bars.transition()
+                .attr("y", function (d) {
+                    return y(d.value);
+                })
+                .attr("height", function (d) {
+                    return innerHeight - y(d.value);
+                });
+            activated = true;
+        };
+        $container.closest('.card').on('active', onActivation);
 
         var onResize = function () {
             var targetWidth = $container.width();

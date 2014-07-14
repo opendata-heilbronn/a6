@@ -14,7 +14,7 @@
 
     var containerSelector = '#chart-fuerfeld-traffic-km';
     var build = function () {
-        var margin = {top: 10, right: 10, bottom: 20, left: 50},
+        var margin = {top: 10, right: 10, bottom: 20, left: 60},
             width = 300,
             height = 250,
             innerWidth = width - margin.left - margin.right,
@@ -85,8 +85,8 @@
                 return y(0);
             })
             .attr("height", 0)
-            .attr("style", function (d) {
-                return 'fill:' + colors[d.label];
+            .style("fill", function (d) {
+                return colors[d.label];
             });
 
         var activated = false;
