@@ -24,8 +24,11 @@
         }
     ];
 
-    var containerSelector = '#chart-weinsberg-flow';
     var build = function () {
+        buildOne('#chart-weinsberg-flow');
+        buildOne('#chart-weinsberg-flow-hohenlohe');
+    };
+    var buildOne = function (containerSelector) {
         var margin = {top: 25, right: 25, bottom: 25, left: 25},
             width = 300,
             height = 300,

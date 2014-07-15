@@ -3,18 +3,18 @@
 
     var data = [
         {
-            label: 'Autobahn - 1 Spur',
-            value: 1800
-        },
-        {
             label: 'normale Straße',
             value: 1000
+        },
+        {
+            label: 'Autobahnspur',
+            value: 1800
         }
     ];
 
     var containerSelector = '#chart-hohenlohe-capacity';
     var build = function () {
-        var margin = {top: 10, right: 10, bottom: 20, left: 40},
+        var margin = {top: 10, right: 10, bottom: 20, left: 60},
             width = 300,
             height = 156,
             innerWidth = width - margin.left - margin.right,
@@ -35,7 +35,8 @@
         var yAxis = d3.svg.axis()
             .scale(y)
             .orient("left")
-            .tickFormat(d3.format(".2s"));
+            .tickFormat(d3.format(",.0f"))
+            .ticks([5]);
 
         var svg = d3.select(containerSelector).append("svg")
             .attr("viewBox", "0 0 " + width + " " + height)
@@ -48,9 +49,15 @@
         x.domain(data.map(function (d) {
             return d.label;
         }));
-        y.domain([0, d3.max(data, function (d) {
+        var maxValue = d3.max(data, function (d) {
             return d.value;
-        })]);
+        });
+        y.domain([0, maxValue]);
+        var color = d3.scale.linear()
+            .domain([d3.min(data, function (d) {
+                return d.value;
+            }), maxValue])
+            .range(["#7C8FDB", "#06458F"]);
 
         containerGroup.append("g")
             .attr("class", "x axis")
@@ -61,7 +68,7 @@
             .attr("class", "y axis")
             .call(yAxis);
 
-        containerGroup.selectAll(".bar")
+        var bars = containerGroup.selectAll(".bar")
             .data(data)
             .enter().append("rect")
             .attr("class", "bar")
@@ -69,12 +76,29 @@
                 return x(d.label);
             })
             .attr("width", x.rangeBand())
-            .attr("y", function (d) {
-                return y(d.value);
+            .attr("y", function () {
+                return y(0);
             })
-            .attr("height", function (d) {
-                return innerHeight - y(d.value);
+            .attr("height", 0)
+            .style("fill", function (d) {
+                return color(d.value);
             });
+
+        var activated = false;
+        var onActivation = function () {
+            if (activated) {
+                return true;
+            }
+            bars.transition()
+                .attr("y", function (d) {
+                    return y(d.value);
+                })
+                .attr("height", function (d) {
+                    return innerHeight - y(d.value);
+                });
+            activated = true;
+        };
+        $container.closest('.card').on('active', onActivation);
 
         var onResize = function () {
             var targetWidth = $container.width();
