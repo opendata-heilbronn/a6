@@ -138,7 +138,7 @@
                 return d.label;
             });
 
-        containerGroup.selectAll(".bar")
+        var bars = containerGroup.selectAll(".bar")
             .data(data)
             .enter()
             .append("line")
@@ -150,10 +150,10 @@
                 return generateBarY(d, 7);
             })
             .attr("x2", function (d) {
-                return generateBarX(d, scale(d.value) + 7);
+                return generateBarX(d, 7);
             })
             .attr("y2", function (d) {
-                return generateBarY(d, scale(d.value) + 7);
+                return generateBarY(d, 7);
             })
             .style("stroke", function (d) {
                 return color(d.value);
@@ -171,14 +171,30 @@
                 return generateBarY(d, 0);
             })
             .attr("x2", function (d) {
-                return generateBarX(d, 20);
+                return generateBarX(d, 7);
             })
             .attr("y2", function (d) {
-                return generateBarY(d, 20);
+                return generateBarY(d, 7);
             })
             .style("stroke", function (d) {
                 return color(d.value);
             });
+
+        var activated = false;
+        var onActivation = function () {
+            if (activated) {
+                return true;
+            }
+            bars.transition()
+                .attr("x2", function (d) {
+                    return generateBarX(d, scale(d.value) + 7);
+                })
+                .attr("y2", function (d) {
+                    return generateBarY(d, scale(d.value) + 7);
+                });
+            activated = true;
+        };
+        $container.closest('.card').on('active', onActivation);
 
         var onResize = function () {
             var targetWidth = $container.width();
