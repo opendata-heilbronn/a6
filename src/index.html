@@ -183,7 +183,7 @@
                 </li>
                 <li class="card">
                     <div class="card-content">
-                        <blockquote>
+                        <blockquote class="blockquote-single">
                             <p>"Problematisch für die Region ist, dass im Gegensatz zu anderen innerdeutschen
                                 West-Ost-Verbindungen wie der A2 und A4 noch keine durchgängig grundlegende <strong>Modernisierung</strong>
                                 der A6 stattgefunden hat, was leider viele Staus nach sich zieht."</p>
@@ -197,9 +197,24 @@
                             waren <strong>Lkw beteiligt</strong>. Kein Wunder: Der <strong>Schwerlastanteil</strong> auf
                             der A6 ist im Vergleich zu anderen Autobahnen extrem hoch. Fast jedes fünfte Fahrzeug ist
                             ein Lastwagen, wie die Auswertungen an der Dauerzählstelle Neckarsulm zeigen.</p>
+                    </div>
+                </li>
 
+                <li class="card">
+                    <div class="card-content">
+                        <h3>LKW-Anteil ...</h3>
+
+                        <div class="btn-group-vertical">
+                            <button type="button" class="btn btn-default active"
+                                    onclick="app.charts.steinsfurtTruckAccidents.show('a6', this)">am A6-Verkehr
+                            </button>
+                            <button type="button" class="btn btn-default"
+                                    onclick="app.charts.steinsfurtTruckAccidents.show('sinsheim', this)">an Unfällen im
+                                Bereich Sinsheim
+                            </button>
+                        </div>
                         <div class="chart" id="chart-steinsfurt-truck-accidents"></div>
-                        <p><em>Quelle: BAST</em></p>
+                        <p><em>Quelle: Statistisches Landesamt, BAST</em></p>
                     </div>
                 </li>
                 <li class="card">
