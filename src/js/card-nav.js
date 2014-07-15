@@ -6,7 +6,7 @@
         var cards = $(container).find('.spot-text').length;
         var switchToCurrentCard = function () {
             $(container).find('.spot-text').hide();
-            $(container).find('.spot-text').eq((currentCard - 1)).show();
+            $(container).find('.spot-text').eq((currentCard - 1)).show().trigger('active').triggerHandler('resize');
             $(container).find('.spot-card-nav-current').text('Card ' + currentCard + ' / ' + cards);
         };
         $(container).find('.spot-card-nav-to-left').on('click', function () {
@@ -23,7 +23,7 @@
         $('.pane-content').each(function (index, element) {
             new CardSwitcher(element);
         });
-    }
+    };
 
     app.cardNav = {
         'init': init

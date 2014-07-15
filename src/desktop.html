@@ -13,6 +13,7 @@
     <link href="css/intro.css" rel="stylesheet"/>
     <link href="css/intro.desktop.css" rel="stylesheet"/>
     <link href="css/spots.css" rel="stylesheet"/>
+    <link href="css/spots.desktop.css" rel="stylesheet"/>
     <!-- endbuild -->
     <title>Bundesautobahn 6 Unfallschwerpunkte</title>
 </head>
@@ -33,7 +34,7 @@
 <nav id="spot-nav" style="display:none">
     <img src="img/a6_europa_map.png" class="spot-nav-map"/>
     <ul class="spot-list list-unstyled">
-        <li onclick="app.scroll.scrollTo(1);">
+        <li onclick="app.scroll.scrollTo(1);" class="row">
             <img src="img/accident_icon.svg" class="spot-accident-icon"/>
 
             <p>A6 als Teil der E50</p>
@@ -112,7 +113,7 @@
                     </div>
                     <span class="spot-card-nav-current">Card 1 / 2</span>
                 </nav>
-                <div class="spot-text" data-card-id="1">
+                <div class="spot-text card" data-card-id="1">
                     <h2>Die A6 als Teil der E50</h2>
 
                     <p>Die Bundesautobahn 6 (A6) ist die bedeutendste Verkehrsader der Region Heilbronn-Franken - und
@@ -145,7 +146,7 @@
                     <p>Daten: Dauerzählstelle Neckarsulm I und Durchschnitt aller Zählstellen auf Bundesautobahnen,
                         BAST</p>
                 </div>
-                <div class="spot-text" data-card-id="2" style="display:none">
+                <div class="spot-text card" data-card-id="2" style="display:none">
                     <p>Wo viele Fahrzeuge verkehren, steigt das Risiko für Unfälle. In diesem Jahr gab es bereits viele
                         schwere Verkehrsunfälle auf der A6 - vor allem mit Lkw-Beteiligung.</p>
 
@@ -161,6 +162,10 @@
                         die fünf Unfallschwerpunkte unter die Lupe und wählen an jedem Schwerpunkt einen anderen Fokus:
                         Welche Rolle spielt der Lkw-Verkehr? Ist der Stau zum Normalzustand geworden? Wo behindern
                         Bauvorhaben den Verkehr? Welche Auswirkungen haben die Unfälle auf die Umleitungsstrecken?</p>
+
+                    <p>
+                        <button type="button" class="btn btn-warning">Unfallkarte öffnen</button>
+                    </p>
                 </div>
             </div>
         </li>
@@ -175,28 +180,65 @@
                     </div>
                     Card 1 / 2
                 </nav>
-                <div class="spot-text">
+                <div class="spot-text card" data-card-id="1">
                     <p><img src="img/spot/steinsfurt.jpg"/></p>
 
-                    <p>Die A6 bei Sinsheim-Steinsfurt ist eine bekannte Stau- und Unfallstrecke. Auf dem hügeligen
-                        Abschnitt behindern behäbige Lkw den Verkehrsfluss. Es kommt es immer wieder zu
-                        Verkehrsbehinderungen und Auffahrunfällen.</p>
+                    <h3>Viele Lkw-Unfälle</h3>
 
-                    <p>
-                        Die Daten zeigen: An fast 40 Prozent aller Unfälle im Bereich Sinsheim-Steinsfurt waren Lkw
-                        beteiligt. Kein Wunder: Der Schwerlastanteil auf der A6 ist im Vergleich zu anderen Autobahnen
-                        extrem hoch. Fast jedes fünfte Fahrzeug ist ein Lastwagen, wie die Auswertungen an der
-                        Dauerzählstelle Neckarsulm zeigen.
+                    <p>Die A6 bei Sinsheim ist eine bekannte <strong>Stau- und Unfallstrecke</strong>. Auf dem
+                        hügeligen Abschnitt
+                        behindern behäbige Lkw den Verkehrsfluss. Es kommt immer wieder zu Verkehrsbehinderungen und
+                        Auffahrunfällen.
                     </p>
 
-                    <div class="chart" id="chart-steinsfurt-truck-accidents"></div>
-                    <p><em>Quelle: BAST</em></p>
+                    <div id="chart-sinsheim-accidents" class="chart"></div>
+
+                    <p>Die Unfallkarte zeigt, dass sich viele Unfälle nach der Anschlussstelle Sinsheim ereignen. In
+                        Fahrtrichtung Mannheim gibt es dort eine Fahrbahnverengung von drei auf zwei Spuren. Nach
+                        Angaben der Mannheimer Polizei zieht diese viele Auffahrunfälle nach sich.</p>
+
+                    <p>Die Unfallhäufung an der Fahrbahnverengung zeigt, wie wichtig ein lückenloser sechsspuriger
+                        Ausbau ist - gerade auf einer stark befahrenen Autobahn wie der A6.
+                    </p>
+
+                    <a href="http://www.stimme.de/3109358" target="_blank"><span
+                            class="glyphicon glyphicon-chevron-right"></span> Sechsspuriger Ausbau der A6 ab 2016
+                        geplant</a>
                 </div>
-                <div class="spot-text">
-                    <p>Bad Guys der A6?</p>
+                <div class="spot-text card" data-card-id="2" style="display:none">
+                    <blockquote class="blockquote-single">
+                        <p>"Problematisch für die Region ist, dass im Gegensatz zu anderen innerdeutschen
+                            West-Ost-Verbindungen wie der A2 und A4 noch keine durchgängig grundlegende <strong>Modernisierung</strong>
+                            der A6 stattgefunden hat, was leider viele Staus nach sich zieht."</p>
+                        <footer>Tomás Bayón, German Graduate School</footer>
+                    </blockquote>
+                    <p>Die Unfalldaten zeigen auch: An fast 40 Prozent aller Unfälle im Bereich Sinsheim-Steinsfurt
+                        waren <strong>Lkw beteiligt</strong>. Kein Wunder: Der <strong>Schwerlastanteil</strong> auf
+                        der A6 ist im Vergleich zu anderen Autobahnen extrem hoch. Fast jedes fünfte Fahrzeug ist
+                        ein Lastwagen, wie die Auswertungen an der Dauerzählstelle Neckarsulm zeigen.</p>
+
+                    <h3>LKW-Anteil ...</h3>
+
+                    <div class="btn-group-vertical">
+                        <button type="button" class="btn btn-default active"
+                                onclick="app.charts.steinsfurtTruckAccidents.show('a6', this)">am A6-Verkehr
+                        </button>
+                        <button type="button" class="btn btn-default"
+                                onclick="app.charts.steinsfurtTruckAccidents.show('sinsheim', this)">an Unfällen im
+                            Bereich Sinsheim
+                        </button>
+                    </div>
+                    <div class="chart" id="chart-steinsfurt-truck-accidents"></div>
+                    <p><em>Quelle: Statistisches Landesamt, BAST</em></p>
 
                     <p>Doch wieso sind überproportional viele Lkw an Unfällen beteiligt? Sind die Lkw-Fahrer die Bad
                         Guys der A6?</p>
+
+                    <p>Bei 60 Prozent der Lkw-Unfälle auf Autobahnen ist die Ursache auf <strong>Fehlverhalten</strong>
+                        der
+                        Fahrzeugführer zurückzuführen. Der häufigste Grund: zu geringer <strong>Abstand</strong>,
+                        gefolgt von nicht
+                        angepasster <strong>Geschwindigkeit</strong>.</p>
                 </div>
             </div>
         </li>
@@ -270,13 +312,20 @@
 <script src="js/app.js"></script>
 <script src="js/scroll.js"></script>
 <script src="js/card-nav.js"></script>
+<script src="js/chart-accidents.js"></script>
 <script src="js/chart-overview-trucks.js"></script>
+<script src="js/chart-sinsheim-accidents.js"></script>
 <script src="js/chart-steinsfurt-truck-accidents.js"></script>
+<script src="js/chart-fuerfeld-accidents.js"></script>
 <script src="js/chart-fuerfeld-traffic.js"></script>
 <script src="js/chart-fuerfeld-traffic-km.js"></script>
 <script src="js/chart-neckartalbruecke-accidents.js"></script>
 <script src="js/chart-hohenlohe-capacity.js"></script>
 <script src="js/chart-weinsberg-flow.js"></script>
+<script src="js/chart-registered-cars.js"></script>
+<script src="js/chart-weinsberg-accidents.js"></script>
+<script src="js/chart-hohenlohe-accidents.js"></script>
+<script src="js/chart-deaths.js"></script>
 <script src="js/analytics.js"></script>
 <!-- endbuild -->
 <script type="text/javascript">

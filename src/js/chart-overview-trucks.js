@@ -154,7 +154,7 @@
         $container.closest('.card').on('active', onActivation);
 
         var onResize = function () {
-            var targetWidth = $container.width();
+            var targetWidth = $container.innerWidth();
             svg.attr("height", Math.round(targetWidth / aspect));
         };
         $(window).on("resize", onResize);

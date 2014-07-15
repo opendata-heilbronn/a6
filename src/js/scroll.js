@@ -84,6 +84,7 @@
         paneScroll.on('scrollEnd', function () {
             if (desktop > 0) {
                 spotNav.update(this.currentPage.pageX);
+                $('.panes').find('.pane').eq(this.currentPage.pageX).find('.card').eq(0).trigger('active');
                 return true;
             }
             var paneId = $('.panes').find('.cards').eq(this.currentPage.pageX).attr('id');
