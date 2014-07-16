@@ -3,22 +3,22 @@
 
     var data = [
         {
-            label: 'Neckarsulm',
+            label: 'A6 Neckarsulm',
             direction: 'W',
             value: 97236
         },
         {
-            label: 'Schwabbach',
+            label: 'A6 Schwabbach',
             direction: 'E',
             value: 61438
         },
         {
-            label: 'Pleidelsheim',
+            label: 'A81 Pleidelsheim',
             direction: 'S',
             value: 102743
         },
         {
-            label: 'Neuenstadt',
+            label: 'A81 Neuenstadt',
             direction: 'N',
             value: 35607
         }
@@ -287,14 +287,14 @@
             if (activated) {
                 return true;
             }
-            bars.transition().duration(2000).ease("easeOutCubic")
+            bars.transition().duration(1000).ease("easeOutCubic")
                 .attr("x2", function (d) {
                     return generateBarX(d, scale(d.value) + 7);
                 })
                 .attr("y2", function (d) {
                     return generateBarY(d, scale(d.value) + 7);
                 });
-            heavyTrafficBars.transition().duration(2000).ease("easeOutCubic")
+            heavyTrafficBars.transition().duration(1000).ease("easeOutCubic")
                 .attr("x2", function (d, i) {
                     var dataEntry = data[i];
                     return generateBarX(d, scale(dataEntry.value * d.percent / 100) + 7);
