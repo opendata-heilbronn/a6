@@ -23,6 +23,24 @@
             value: 35607
         }
     ];
+    var heavyTrafficData = [
+        {
+            direction: 'W',
+            percent: 19.4
+        },
+        {
+            direction: 'E',
+            percent: 22.6
+        },
+        {
+            direction: 'S',
+            percent: 11.1
+        },
+        {
+            direction: 'N',
+            percent: 14.8
+        }
+    ];
 
     var build = function () {
         buildOne('#chart-weinsberg-flow');
@@ -161,17 +179,16 @@
             });
 
         svg.append("text")
-            .attr("x", width)
+            .attr("x", 0)
             .attr("y", 15)
-            .attr("text-anchor", "end")
             .style("font-size", "11px")
             .text("Kfz / 24h");
 
-        var bars = containerGroup.selectAll(".bar")
+        var bars = containerGroup.selectAll(".traffic-bar")
             .data(data)
             .enter()
             .append("line")
-            .attr("class", "bar")
+            .attr("class", "bar traffic-bar")
             .attr("x1", function (d) {
                 return generateBarX(d, 7);
             })
@@ -187,6 +204,25 @@
             .style("stroke", function (d) {
                 return color(d.value);
             });
+
+        var heavyTrafficBars = containerGroup.selectAll(".heavy-traffic-bar")
+            .data(heavyTrafficData)
+            .enter()
+            .append("line")
+            .attr("class", "bar heavy-traffic-bar")
+            .attr("x1", function (d) {
+                return generateBarX(d, 7);
+            })
+            .attr("y1", function (d) {
+                return generateBarY(d, 7);
+            })
+            .attr("x2", function (d) {
+                return generateBarX(d, 7);
+            })
+            .attr("y2", function (d) {
+                return generateBarY(d, 7);
+            })
+            .style("stroke", '#FF8C00');
 
         containerGroup.selectAll(".orientation-line")
             .data(data)
@@ -209,6 +245,43 @@
                 return color(d.value);
             });
 
+        var vehicleTypes = [
+            {
+                label: 'LKW',
+                color: '#FF8C00'
+            },
+            {
+                label: 'Sonstige',
+                color: '#044795'
+            }
+        ];
+
+        var legend = svg.selectAll(".legend")
+            .data(vehicleTypes)
+            .enter().append("g")
+            .attr("class", "legend")
+            .attr("transform", function (d, i) {
+                return "translate(0," + (i * 20 + 4) + ")";
+            });
+
+        legend.append("rect")
+            .attr("x", width - 13)
+            .attr("width", 13)
+            .attr("height", 13)
+            .style("fill", function (d) {
+                return d.color;
+            });
+
+        legend.append("text")
+            .attr("x", width - 17)
+            .attr("y", 7)
+            .attr("dy", ".35em")
+            .style("text-anchor", "end")
+            .style("font-size", "11px")
+            .text(function (d) {
+                return d.label;
+            });
+
         var activated = false;
         var onActivation = function () {
             if (activated) {
@@ -220,6 +293,15 @@
                 })
                 .attr("y2", function (d) {
                     return generateBarY(d, scale(d.value) + 7);
+                });
+            heavyTrafficBars.transition().duration(2000).ease("easeOutCubic")
+                .attr("x2", function (d, i) {
+                    var dataEntry = data[i];
+                    return generateBarX(d, scale(dataEntry.value * d.percent / 100) + 7);
+                })
+                .attr("y2", function (d, i) {
+                    var dataEntry = data[i];
+                    return generateBarY(d, scale(dataEntry.value * d.percent / 100) + 7);
                 });
             activated = true;
         };
