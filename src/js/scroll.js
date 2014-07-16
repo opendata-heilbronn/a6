@@ -57,38 +57,20 @@
         return cardScroll;
     };
 
-    var spotNav = {
-        update: function (paneNumber) {
-            $('#spot-nav').toggle(paneNumber > 0);
-        }
-    };
-
     var activatePaneScrolling = function () {
-        var currentPaneId = null, cardScroll = null, desktop = $('.desktop').length;
-        if (desktop > 0) {
-            $('.pane').each(function () {
-                $(this).find('.cardgroup:gt(0)').hide();
-            });
-        }
+        var currentPaneId = null, cardScroll = null;
 
         paneScroll = new IScroll('.panes', {
             scrollX: true,
             scrollY: false,
             momentum: false,
-            snap: true,
+            snap: '.pane',
             snapSpeed: 200,
             keyBindings: true,
             eventPassthrough: true
         });
 
         paneScroll.on('scrollEnd', function () {
-            if (desktop > 0) {
-                spotNav.update(this.currentPage.pageX);
-                $('.panes').find('.pane').eq(this.currentPage.pageX).find('.card').each(function () {
-                    $(this).triggerHandler('active');
-                });
-                return true;
-            }
             var paneId = $('.panes').find('.cards').eq(this.currentPage.pageX).attr('id');
             if (paneId !== currentPaneId) {
                 if (cardScroll !== null) {

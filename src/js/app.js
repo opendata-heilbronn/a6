@@ -21,6 +21,9 @@ var app = {
     d3.format = germanFormatters.numberFormat;
 
     app.init = function () {
+        if (!Modernizr.touch) {
+            $('.parallax-panes').addClass('pane').children().removeClass('pane');
+        }
         if (app.scroll) {
             app.scroll.init();
         }

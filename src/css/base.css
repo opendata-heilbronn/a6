@@ -152,6 +152,16 @@ h2 small {
     margin: 1em auto;
 }
 
+.parallax-panes {
+    height: 100%;
+    width: 100%;
+}
+
+.parallax-panes.pane {
+    overflow-y: scroll;
+    width: 12.5%;
+}
+
 @media (min-width: 992px) {
     .fullscreen {
         top: 50px;
