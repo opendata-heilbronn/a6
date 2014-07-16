@@ -305,12 +305,13 @@
                 });
             activated = true;
         };
-        $container.closest('.card').on('active', onActivation);
 
         var onResize = function () {
             var targetWidth = $container.width();
             svg.attr("height", Math.round(targetWidth / aspect));
         };
+
+        $container.closest('.card').on('active', onActivation).on("resize", onResize);
         $(window).on("resize", onResize);
         onResize();
     };

@@ -25,6 +25,7 @@
     };
 
     var init = function () {
+        $('.spot-card-nav').show();
         $('.card-list').each(function (index, element) {
             new CardSwitcher(element);
         });

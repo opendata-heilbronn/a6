@@ -123,6 +123,7 @@
             var targetWidth = $container.width();
             svg.attr("height", Math.round(targetWidth / aspect));
         };
+
         $container.closest('.card').on('resize', onResize).on('active', onActivation);
         $(window).on("resize", onResize);
         onResize();
