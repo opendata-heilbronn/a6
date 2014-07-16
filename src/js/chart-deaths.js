@@ -89,7 +89,7 @@
             .attr("class", "y axis")
             .call(yAxis);
 
-        var colors = ['#D76043', '#E4842C', '#D5C210'];
+        var colors = ['#7AB4EE', '#434348', '#A6FF91'];
 
         var bars = containerGroup.selectAll(".bar")
             .data(barData)
