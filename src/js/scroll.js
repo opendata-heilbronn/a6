@@ -4,7 +4,7 @@
     var paneScroll;
 
     var buildCardScroll = function (selector) {
-        var $cards = $(selector).find('.card-list').children();
+        var $cards = $(selector).find('.card-list').find('.card');
         var cardOffsets = [];
         $cards.each(function (index, card) {
             var height = $(card).height();
@@ -17,7 +17,7 @@
             momentum: true,
             scrollbar: false,
             keyBindings: true,
-            snap: 'li',
+            snap: '.card',
             probeType: '2',
             tap: true
         });
@@ -70,6 +70,11 @@
 
     var activatePaneScrolling = function () {
         var currentPaneId = null, cardScroll = null, desktop = $('.desktop').length;
+        if (desktop > 0) {
+            $('.pane').each(function () {
+                $(this).find('.cardgroup:gt(0)').hide();
+            });
+        }
 
         paneScroll = new IScroll('.panes', {
             scrollX: true,
@@ -84,7 +89,9 @@
         paneScroll.on('scrollEnd', function () {
             if (desktop > 0) {
                 spotNav.update(this.currentPage.pageX);
-                $('.panes').find('.pane').eq(this.currentPage.pageX).find('.card').eq(0).trigger('active');
+                $('.panes').find('.pane').eq(this.currentPage.pageX).find('.cardgroup').eq(0).find('.card').each(function () {
+                    $(this).triggerHandler('active');
+                });
                 return true;
             }
             var paneId = $('.panes').find('.cards').eq(this.currentPage.pageX).attr('id');

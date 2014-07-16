@@ -3,10 +3,15 @@
 
     var CardSwitcher = function (container) {
         var currentCard = 1;
-        var cards = $(container).find('.spot-text').length;
+        var cards = $(container).find('.cardgroup').length;
         var switchToCurrentCard = function () {
-            $(container).find('.spot-text').hide();
-            $(container).find('.spot-text').eq((currentCard - 1)).show().trigger('active').triggerHandler('resize');
+            $(container).find('.cardgroup').hide();
+            var currentCardgroup = $(container).find('.cardgroup').eq((currentCard - 1));
+            currentCardgroup.show();
+            currentCardgroup.find('.card').each(function () {
+                $(this).triggerHandler('resize');
+                $(this).triggerHandler('active');
+            });
             $(container).find('.spot-card-nav-current').text('Card ' + currentCard + ' / ' + cards);
         };
         $(container).find('.spot-card-nav-to-left').on('click', function () {
@@ -20,7 +25,7 @@
     };
 
     var init = function () {
-        $('.pane-content').each(function (index, element) {
+        $('.card-list').each(function (index, element) {
             new CardSwitcher(element);
         });
     };
