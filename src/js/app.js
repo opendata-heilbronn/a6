@@ -22,9 +22,9 @@ var app = {
 
     app.init = function () {
         if (!Modernizr.touch) {
-            $('.parallax-panes').addClass('pane').children().removeClass('pane');
-        }
-        if (app.scroll) {
+            $('html, body, .fullscreen, .fullscreen-content, .pane-scroller, .pane').removeClass('touch').addClass('notouch');
+            app.parallax.init();
+        } else {
             app.scroll.init();
         }
         Object.keys(app.charts).forEach(function (chartId) {

@@ -1,4 +1,4 @@
-(function (d3, app) {
+(function (IScroll, app) {
     'use strict';
 
     var paneScroll;
@@ -71,6 +71,9 @@
         });
 
         paneScroll.on('scrollEnd', function () {
+            if (!Modernizr.touch) {
+                return true;
+            }
             var paneId = $('.panes').find('.cards').eq(this.currentPage.pageX).attr('id');
             if (paneId !== currentPaneId) {
                 if (cardScroll !== null) {
@@ -105,4 +108,4 @@
         'scrollToPrev': scrollToPrev
     };
 })
-(d3, app);
+(IScroll, app);

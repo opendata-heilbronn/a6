@@ -79,7 +79,7 @@ blockquote footer {
     margin-left: 28px;
 }
 
-.pane-scroller {
+.touch .pane-scroller {
     position: absolute;
     z-index: 1;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -102,7 +102,7 @@ blockquote footer {
     text-size-adjust: none;
 }
 
-.card-scroller {
+.touch .card-scroller {
     position: relative;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     width: 100%;
@@ -162,6 +162,20 @@ h2 small {
     width: 12.5%;
 }
 
+.pane-list {
+    height: 100%;
+    width: 100%;
+}
+
+.parallax-panes.pane .pane-list {
+    height: auto;
+}
+
+.parallax-panes.pane .pane-list .pane {
+    width: 100%;
+    float: none;
+}
+
 @media (min-width: 992px) {
     .fullscreen {
         top: 50px;
@@ -181,4 +195,53 @@ h2 small {
     .navbar-brand img {
         height: 24px;
     }
+}
+
+.notouch {
+    position: relative;
+    float: none;
+    overflow: auto;
+    width: 100%;
+    top: auto;
+    bottom: auto;
+}
+
+.notouch .card-list {
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.pane.notouch {
+    background: transparent;
+}
+
+.notouch .spot-content {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 110% 110%;
+    height: 100%;
+    width: 100%;
+    max-width: none;
+}
+
+.notouch #slide-1 .spot-content {
+    background-image: url('../img/bg.jpg');
+}
+
+.notouch #slide-2 .spot-content {
+    background-image: url('../img/spot/steinsfurt.jpg');
+}
+
+.notouch .card-scroller {
+    padding: 0;
+    height: 100%;
+}
+
+.notouch .card {
+    opacity: 1;
+}
+
+.notouch #slide-0 {
+    display: none;
 }

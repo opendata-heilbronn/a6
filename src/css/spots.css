@@ -1,7 +1,6 @@
 .spot-content {
     height: 100%;
     position: relative;
-    overflow-y: scroll;
     max-width: 989px;
     margin: 0 auto;
 }
@@ -156,7 +155,6 @@ img.accident-icon {
 }
 
 #carousel {
-    overflow: hidden;
     width: 100%;
     -webkit-backface-visibility: hidden;
     -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
@@ -176,7 +174,6 @@ img.accident-icon {
     -ms-transform: translate3d(0%, 0, 0) scale3d(1, 1, 1);
     -o-transform: translate3d(0%, 0, 0) scale3d(1, 1, 1);
     transform: translate3d(0%, 0, 0) scale3d(1, 1, 1);
-    overflow: hidden;
     -webkit-backface-visibility: hidden;
     -webkit-transform-style: preserve-3d;
 }
@@ -189,7 +186,6 @@ img.accident-icon {
 
 #carousel li {
     float: left;
-    overflow: hidden;
     -webkit-transform-style: preserve-3d;
     -webkit-transform: translate3d(0, 0, 0);
 }
