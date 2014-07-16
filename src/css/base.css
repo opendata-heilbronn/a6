@@ -219,7 +219,7 @@ h2 small {
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 110% 110%;
+    background-size: cover;
     height: 100%;
     width: 100%;
     max-width: none;
@@ -233,6 +233,26 @@ h2 small {
     background-image: url('../img/spot/steinsfurt.jpg');
 }
 
+.notouch #slide-3 .spot-content {
+    background-image: url('../img/spot/fuerfeld.jpg');
+}
+
+.notouch #slide-4 .spot-content {
+    background-image: url('../img/spot/neckartalbruecke.jpg');
+}
+
+.notouch #slide-5 .spot-content {
+    background-image: url('../img/spot/weinsberger_kreuz.jpg');
+}
+
+.notouch #slide-6 .spot-content {
+    background-image: url('../img/spot/hohenlohe.jpg');
+}
+
+.notouch #slide-7 .spot-content {
+    background-image: url('../img/bg.jpg');
+}
+
 .notouch .card-scroller {
     padding: 0;
     height: 100%;
@@ -244,4 +264,24 @@ h2 small {
 
 .notouch #slide-0 {
     display: none;
+}
+
+#slide-1.notouch {
+    padding-top: 50px;
+}
+
+.notouch .pane {
+    height: 2800px;
+}
+
+.notouch .card-teaser {
+    padding: 50px 16px 16px 16px;
+}
+
+.notouch .spot-title-container {
+    display: none;
+}
+
+.notouch .spot-title-map {
+    background: rgba(0, 0, 0, 0.8);
 }
