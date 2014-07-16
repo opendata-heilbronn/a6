@@ -94,7 +94,7 @@
             if (activated) {
                 return true;
             }
-            bars.transition()
+            bars.transition().duration(600)
                 .attr("y", function (d) {
                     return y(d.value);
                 })

@@ -149,5 +149,6 @@ h2 small {
 }
 
 .chart {
-    margin-bottom: 1em;
+    max-width: 400px;
+    margin: 1em auto;
 }

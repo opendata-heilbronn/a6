@@ -87,13 +87,7 @@
 
         containerGroup.append("g")
             .attr("class", "y axis")
-            .call(yAxis)
-            .append("text")
-            .attr("transform", "rotate(-90)")
-            .attr("y", 6)
-            .attr("dy", ".71em")
-            .style("text-anchor", "end")
-            .text("Tote");
+            .call(yAxis);
 
         var colors = ['#D76043', '#E4842C', '#D5C210'];
 
@@ -143,7 +137,7 @@
             if (activated) {
                 return true;
             }
-            bars.transition()
+            bars.transition().duration(600)
                 .attr("y", function (d) {
                     return y(d.value + d.start);
                 })

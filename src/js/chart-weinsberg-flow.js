@@ -188,7 +188,7 @@
             if (activated) {
                 return true;
             }
-            bars.transition()
+            bars.transition().duration(600)
                 .attr("x2", function (d) {
                     return generateBarX(d, scale(d.value) + 7);
                 })

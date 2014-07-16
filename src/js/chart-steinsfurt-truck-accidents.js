@@ -102,10 +102,10 @@
 
         update = function (data) {
             g.data(pie(data), key);
-            g.select("path").transition().attrTween("d", arcTween).style("fill", function (d) {
+            g.select("path").transition().duration(600).attrTween("d", arcTween).style("fill", function (d) {
                 return color(d.data.value);
             });
-            g.select("text").transition().attr("transform", function (d) {
+            g.select("text").transition().duration(600).attr("transform", function (d) {
                 return "translate(" + arc.centroid(d) + ")";
             });
         };
