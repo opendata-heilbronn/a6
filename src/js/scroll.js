@@ -58,13 +58,8 @@
     };
 
     var spotNav = {
-        paneMaps: ['a6_europa_map.png', 'spot/karte_steinsfurt.svg', 'spot/karte_fuerfeld.svg', 'spot/karte_neckartalbruecke.svg', 'spot/karte_weinsberg.svg', 'spot/karte_hohenlohe.svg', 'spot/karte_hohenlohe.svg'],
         update: function (paneNumber) {
             $('#spot-nav').toggle(paneNumber > 0);
-            if (paneNumber > 0) {
-                var map = this.paneMaps[(paneNumber - 1)];
-                $('.spot-nav-map').attr('src', 'img/' + map);
-            }
         }
     };
 
@@ -89,7 +84,7 @@
         paneScroll.on('scrollEnd', function () {
             if (desktop > 0) {
                 spotNav.update(this.currentPage.pageX);
-                $('.panes').find('.pane').eq(this.currentPage.pageX).find('.cardgroup').eq(0).find('.card').each(function () {
+                $('.panes').find('.pane').eq(this.currentPage.pageX).find('.card').each(function () {
                     $(this).triggerHandler('active');
                 });
                 return true;
@@ -113,9 +108,19 @@
         paneScroll.goToPage(page, 0, 300);
     };
 
+    var scrollToNext = function () {
+        paneScroll.next();
+    };
+
+    var scrollToPrev = function () {
+        paneScroll.prev();
+    };
+
     app.scroll = {
         'init': activatePaneScrolling,
-        'scrollTo': scrollTo
+        'scrollTo': scrollTo,
+        'scrollToNext': scrollToNext,
+        'scrollToPrev': scrollToPrev
     };
 })
 (d3, app);

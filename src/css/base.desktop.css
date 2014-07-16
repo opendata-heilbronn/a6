@@ -54,53 +54,27 @@ body {
     margin-bottom: 14px;
 }
 
-.spot-accident-icon {
-    width: 50px;
-}
-
 .spot-list li {
     color: #FFF;
     display: block;
-    margin-bottom: 25px;
-    text-align: center;
+    margin-bottom: 14px;
     cursor: pointer;
-}
-
-.spot-accident-icon {
-    display: block;
-    margin: 0 auto;
-}
-
-.cardgroup {
-    background: #FFF;
-    padding: 36px;
-    max-width: 700px;
-}
-
-.spot-title-map {
-    display: none;
-}
-
-.spot-card-nav {
-    max-width: 700px;
-    padding: 8px;
-    background: #E0E0E0;
-    text-align: center;
     position: relative;
 }
 
-.spot-card-nav-to-left {
-    cursor: pointer;
-    position: absolute;
-    left: 8px;
-    top: 8px;
+.spot-list p {
+    display: inline-block;
 }
 
-.spot-card-nav-to-right {
-    cursor: pointer;
-    position: absolute;
-    right: 8px;
-    top: 8px;
+.spot-accident-icon {
+    width: 40px;
+    margin-right: 7px;
+}
+
+.card-list {
+    background: #FFF;
+    padding: 36px;
+    max-width: 500px;
 }
 
 .spot-text h2 {
@@ -109,4 +83,12 @@ body {
 
 .spot-text img {
     width: 100%;
+}
+
+.explain-slide-right {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -30px 0 0 300px;
+    color: #FFFF00;
 }
