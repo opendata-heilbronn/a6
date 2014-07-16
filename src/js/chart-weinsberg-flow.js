@@ -29,7 +29,7 @@
         buildOne('#chart-weinsberg-flow-hohenlohe');
     };
     var buildOne = function (containerSelector) {
-        var margin = {top: 25, right: 25, bottom: 25, left: 25},
+        var margin = {top: 32, right: 32, bottom: 32, left: 32},
             width = 300,
             height = 300,
             innerWidth = width - margin.left - margin.right,
@@ -93,34 +93,34 @@
 
         var directionLabelList = [
             {
-                label: 'Neuenstadt',
-                x: width / 2,
-                y: 15,
-                anchor: 'middle'
-            },
-            {
-                label: 'Schwabbach',
-                x: width - 15,
-                y: height / 2,
-                anchor: 'middle',
-                rotate: 90
-            },
-            {
-                label: 'Pleidelsheim',
-                x: width / 2,
-                y: height,
-                anchor: 'middle'
-            },
-            {
-                label: 'Neckarsulm',
                 x: 15,
                 y: height / 2,
                 anchor: 'middle',
-                rotate: 270
+                rotate: 270,
+                entry: data[0]
+            },
+            {
+                x: width - 15,
+                y: height / 2,
+                anchor: 'middle',
+                rotate: 90,
+                entry: data[1]
+            },
+            {
+                x: width / 2,
+                y: height - 20,
+                anchor: 'middle',
+                entry: data[2]
+            },
+            {
+                x: width / 2,
+                y: 15,
+                anchor: 'middle',
+                entry: data[3]
             }
         ];
 
-        svg.selectAll('.direction')
+        var labels = svg.selectAll('.direction')
             .data(directionLabelList)
             .enter()
             .append("text")
@@ -136,10 +136,36 @@
             })
             .attr("transform", function (d) {
                 return d.rotate ? "rotate(" + d.rotate + " " + d.x + " " + d.y + ")" : "";
+            });
+
+        var formatValue = d3.format(",");
+
+        labels.append("tspan")
+            .style("font-size", function (d) {
+                if (d.entry.direction === "S") return "11px";
             })
             .text(function (d) {
-                return d.label;
+                return d.entry.direction !== "S" ? d.entry.label : formatValue(d.entry.value);
             });
+
+        labels.append("tspan")
+            .attr("x", function (d) {
+                return d.x;
+            })
+            .attr("dy", "1.2em")
+            .style("font-size", function (d) {
+                if (d.entry.direction !== "S") return "11px";
+            })
+            .text(function (d) {
+                return d.entry.direction !== "S" ? formatValue(d.entry.value) : d.entry.label;
+            });
+
+        svg.append("text")
+            .attr("x", width)
+            .attr("y", 15)
+            .attr("text-anchor", "end")
+            .style("font-size", "11px")
+            .text("Kfz / 24h");
 
         var bars = containerGroup.selectAll(".bar")
             .data(data)
@@ -188,7 +214,7 @@
             if (activated) {
                 return true;
             }
-            bars.transition().duration(600)
+            bars.transition().duration(2000).ease("easeOutCubic")
                 .attr("x2", function (d) {
                     return generateBarX(d, scale(d.value) + 7);
                 })
