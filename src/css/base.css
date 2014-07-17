@@ -253,6 +253,10 @@ h2 small {
     background-image: url('../img/bg_fazit.desktop.jpg');
 }
 
+.notouch #slide-8 .spot-content {
+    background-image: url('../img/bg.jpg');
+}
+
 .notouch .card-scroller {
     padding: 0;
     height: 100%;
