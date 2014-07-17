@@ -90,7 +90,7 @@
     };
 
     var scrollTo = function (page) {
-        paneScroll.goToPage(page, 0, 300);
+        if (paneScroll) paneScroll.goToPage(page, 0, 300);
     };
 
     var scrollToNext = function () {
