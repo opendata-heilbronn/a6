@@ -19,14 +19,24 @@
 <nav class="navbar navbar-default hidden-xs hidden-sm navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
-            <span class="navbar-brand"><img src="img/logo.png" alt="Heilbronner Stimme"/></span>
+            <a class="navbar-brand" href="http://www.stimme.de" target="_blank"><img src="img/logo.png"
+                                                                                     alt="Heilbronner Stimme"/></a>
         </div>
+        <p class="navbar-text">Die A6: Unfälle, Baustellen, Staus - eine Analyse</p>
 
-        <ul class="nav navbar-nav navbar-right">
-            <li><a>Über das Projekt</a></li>
-        </ul>
+        <div class="pull-right">
+
+        </div>
     </div>
 </nav>
+
+<div class="modal fade" id="a6-accident-map" tabindex="-1" role="dialog" aria-labelledby="a6-accident-mapLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        </div>
+    </div>
+</div>
 
 <div class="fullscreen">
 <div class="fullscreen-content panes">
@@ -128,15 +138,19 @@
                             mit allen polizeilich erfassten Unfällen auf der A6 von Januar 2010 bis einschließlich April
                             2014 zur Verfügung gestellt. </p>
 
-                        <p>
-                            <button type="button" class="btn btn-warning">Unfallkarte öffnen</button>
+                        <p class="p-btn">
+                            <a class="btn btn-warning" data-toggle="modal" data-target="#a6-accident-map"
+                               href="accident-map-modal.html">
+                                Unfallkarte öffnen
+                            </a>
                         </p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-content">
                         <p>Die Unfallkarte zeigt Abschnitte in unserem Verbreitungsgebiet, an denen es besonders häufig
-                            kracht: Sinsheim, rund um Fürfeld, im Bereich der Neckartalbrücke, das Weinsberger Kreuz und
+                            kracht: Sinsheim, rund um Fürfeld, den Bereich der Neckartalbrücke, das Weinsberger Kreuz
+                            und
                             den hohenlohischen Teil der A6 von Bretzfeld bis Öhringen.</p>
 
                         <p>Wir nehmen diese <strong>fünf Bereiche</strong>
@@ -145,6 +159,18 @@
                             auf die Umleitungsstrecken?
                         </p>
                     </div>
+                </div>
+                <div class="card">
+                    <nav class="nav-arrows">
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6 nav-arrow-prev">
+                                <img src="img/nav_arrows_prev.svg"/>
+                            </div>
+                            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6 nav-arrow-next">
+                                <img src="img/nav_arrows_next.svg"/>
+                            </div>
+                        </div>
+                    </nav>
                 </div>
             </div>
         </div>
@@ -250,8 +276,11 @@
                             Polizei zieht diese
                             Fahrbahnverengung viele Auffahrunfälle nach sich.</p>
 
-                        <p>
-                            <button type="button" class="btn btn-warning">Unfallkarte öffnen</button>
+                        <p class="p-btn">
+                            <a class="btn btn-warning" data-toggle="modal" data-target="#a6-accident-map"
+                               href="accident-map-modal.html">
+                                Unfallkarte öffnen
+                            </a>
                         </p>
                     </div>
                 </div>
@@ -279,6 +308,18 @@
                             </footer>
                         </blockquote>
                     </div>
+                </div>
+                <div class="card">
+                    <nav class="nav-arrows">
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6 nav-arrow-prev">
+                                <img src="img/nav_arrows_prev.svg"/>
+                            </div>
+                            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6 nav-arrow-next">
+                                <img src="img/nav_arrows_next.svg"/>
+                            </div>
+                        </div>
+                    </nav>
                 </div>
             </div>
         </div>
@@ -317,8 +358,11 @@
                             Stauvorkommen und damit das Unfallrisiko.
                         </p>
 
-                        <p>
-                            <button type="button" class="btn btn-warning">Unfallkarte öffnen</button>
+                        <p class="p-btn">
+                            <a class="btn btn-warning" data-toggle="modal" data-target="#a6-accident-map"
+                               href="accident-map-modal.html">
+                                Unfallkarte öffnen
+                            </a>
                         </p>
                     </div>
                 </div>
@@ -370,6 +414,18 @@
                                 (stimme.de)</a>
                         </p>
                     </div>
+                </div>
+                <div class="card">
+                    <nav class="nav-arrows">
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6 nav-arrow-prev">
+                                <img src="img/nav_arrows_prev.svg"/>
+                            </div>
+                            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6 nav-arrow-next">
+                                <img src="img/nav_arrows_next.svg"/>
+                            </div>
+                        </div>
+                    </nav>
                 </div>
             </div>
         </div>
@@ -469,7 +525,8 @@
                 </div>
                 <div class="card">
                     <div class="card-content">
-                        <p><img src="img/spot/neckartalbruecke_plan.jpg"/></p>
+                        <p><a href="img/spot/neckartalbruecke_plan.jpg" target="_blank"><img
+                                src="img/spot/neckartalbruecke_plan.jpg"/></a></p>
 
                         <p>Visualisierung der geplanten Neckarbrücke</p>
 
@@ -488,6 +545,18 @@
                                target="_blank">&gt; Brücken entlang der A6 (stimme.de)</a>
                         </p>
                     </div>
+                </div>
+                <div class="card">
+                    <nav class="nav-arrows">
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6 nav-arrow-prev">
+                                <img src="img/nav_arrows_prev.svg"/>
+                            </div>
+                            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6 nav-arrow-next">
+                                <img src="img/nav_arrows_next.svg"/>
+                            </div>
+                        </div>
+                    </nav>
                 </div>
             </div>
         </div>
@@ -586,6 +655,18 @@
                         <div id="chart-weinsberg-accidents" class="chart"></div>
                     </div>
                 </div>
+                <div class="card">
+                    <nav class="nav-arrows">
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6 nav-arrow-prev">
+                                <img src="img/nav_arrows_prev.svg"/>
+                            </div>
+                            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6 nav-arrow-next">
+                                <img src="img/nav_arrows_next.svg"/>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
             </div>
         </div>
     </div>
@@ -635,7 +716,6 @@
                             <strong>Schwerverkehrsanteil</strong> (22,6 Prozent) auf. Mindestens jedes fünfte Fahrzeug
                             ist ein Lkw. Zum
                             Vergleich: Auf der A81 bei Pleidelsheim ist nur jedes zehnte Fahrzeug ein Lkw.
-                            Chart Windrose Schwerverkehr:
                         </p>
                     </div>
                 </div>
@@ -689,6 +769,18 @@
                                target="_blank">&gt; Gute Chancen für Privatausbau der A6</a>
                         </p>
                     </div>
+                </div>
+                <div class="card">
+                    <nav class="nav-arrows">
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6 nav-arrow-prev">
+                                <img src="img/nav_arrows_prev.svg"/>
+                            </div>
+                            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6 nav-arrow-next">
+                                <img src="img/nav_arrows_next.svg"/>
+                            </div>
+                        </div>
+                    </nav>
                 </div>
             </div>
         </div>
@@ -829,6 +921,15 @@
                         </p>
                     </div>
                 </div>
+                <div class="card">
+                    <nav class="nav-arrows">
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6 nav-arrow-prev">
+                                <img src="img/nav_arrows_prev.svg"/>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
             </div>
         </div>
     </div>
@@ -925,8 +1026,7 @@
                             145800252<br/> <br/> phG: Heilbronner
                             Stimme Verwaltungsgesellschaft mbH<br/> Amtsgericht Stuttgart HRB 103454<br/> <br/>
                             Geschäftsführer:<br/> Tilmann Distelbarth,
-                            Bernd Herzberger<br/> <br/>
-                            <br/>
+                            Bernd Herzberger
                         </address>
                     </div>
                 </div>

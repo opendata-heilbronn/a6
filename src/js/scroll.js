@@ -70,6 +70,13 @@
             eventPassthrough: true
         });
 
+        $('.nav-arrow-prev').on('tap', function () {
+            paneScroll.prev();
+        });
+        $('.nav-arrow-next').on('tap', function () {
+            paneScroll.next();
+        });
+
         paneScroll.on('scrollEnd', function () {
             if (!Modernizr.touch) {
                 return true;
@@ -94,6 +101,7 @@
     };
 
     var scrollToNext = function () {
+        console.log('HEY');
         paneScroll.next();
     };
 

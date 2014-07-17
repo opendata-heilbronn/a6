@@ -33,6 +33,6 @@ var app = {
         }
         Object.keys(app.charts).forEach(function (chartId) {
             app.charts[chartId].init();
-        })
+        });
     };
 })(app, d3);

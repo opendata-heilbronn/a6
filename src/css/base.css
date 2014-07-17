@@ -297,3 +297,60 @@ h2 small {
 .notouch #fazit-teaser {
     visibility: hidden;
 }
+
+.modal-body {
+    padding: 0;
+}
+
+.modal-content .close {
+    position: absolute;
+    z-index: 1000;
+    right: 5px;
+    top: 0;
+    font-size: 33px;
+}
+
+.cartodbmap {
+    height: 420px;
+}
+
+@media (min-height: 600px) {
+    .cartodbmap {
+        height: 540px;
+    }
+}
+
+@media (min-height: 800px) {
+    .cartodbmap {
+        height: 740px;
+    }
+}
+
+.p-btn {
+    text-align: center;
+    padding-top: 1em;
+}
+
+.notouch .nav-arrows {
+    display: none;
+}
+
+.nav-arrows {
+    padding: 0 14px 14px 14px;
+    width: 100%;
+}
+
+.nav-arrows img {
+    height: 70px;
+}
+
+.nav-arrow-next img {
+    animation: inout 4s;
+    animation-iteration-count: infinite;
+    -webkit-animation: inout 4s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+.nav-arrow-next {
+    text-align: right;
+}
