@@ -45,7 +45,7 @@ blockquote footer {
 
 .pane {
     float: left;
-    width: 12.5%;
+    width: 11.1112%;
     border: none;
 }
 
@@ -83,7 +83,7 @@ blockquote footer {
     position: absolute;
     z-index: 1;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    width: 800%;
+    width: 900%;
     height: 100%;
     -webkit-transform: translateZ(0);
     -moz-transform: translateZ(0);
@@ -155,11 +155,6 @@ h2 small {
 .parallax-panes {
     height: 100%;
     width: 100%;
-}
-
-.parallax-panes.pane {
-    overflow-y: scroll;
-    width: 12.5%;
 }
 
 .pane-list {
