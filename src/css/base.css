@@ -230,27 +230,27 @@ h2 small {
 }
 
 .notouch #slide-2 .spot-content {
-    background-image: url('../img/spot/steinsfurt.jpg');
+    background-image: url('../img/spot/steinsfurt.desktop.jpg');
 }
 
 .notouch #slide-3 .spot-content {
-    background-image: url('../img/spot/fuerfeld.jpg');
+    background-image: url('../img/spot/fuerfeld.desktop.jpg');
 }
 
 .notouch #slide-4 .spot-content {
-    background-image: url('../img/spot/neckartalbruecke.jpg');
+    background-image: url('../img/spot/neckartalbruecke.desktop.jpg');
 }
 
 .notouch #slide-5 .spot-content {
-    background-image: url('../img/spot/weinsberger_kreuz.jpg');
+    background-image: url('../img/spot/weinsberger_kreuz.desktop.jpg');
 }
 
 .notouch #slide-6 .spot-content {
-    background-image: url('../img/spot/hohenlohe.jpg');
+    background-image: url('../img/spot/hohenlohe.desktop.jpg');
 }
 
 .notouch #slide-7 .spot-content {
-    background-image: url('../img/bg.jpg');
+    background-image: url('../img/bg_fazit.desktop.jpg');
 }
 
 .notouch .card-scroller {
@@ -284,4 +284,8 @@ h2 small {
 
 .notouch .spot-title-map {
     background: rgba(0, 0, 0, 0.8);
+}
+
+.notouch #fazit-teaser {
+    visibility: hidden;
 }
