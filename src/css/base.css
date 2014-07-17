@@ -263,7 +263,16 @@ h2 small {
 }
 
 .notouch #slide-0 {
-    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    transition: left 500ms ease-in-out;
+}
+
+#slide-0.off {
+    left: -100%;
 }
 
 #slide-1.notouch {

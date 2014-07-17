@@ -22,6 +22,10 @@ var app = {
 
     app.init = function () {
         if (!Modernizr.touch) {
+            $('#slide-0').height($(window).innerHeight());
+            $('.explain-slide').on('click', function () {
+                $('#slide-0').addClass('off');
+            });
             $('html, body, .fullscreen, .fullscreen-content, .pane-scroller, .pane').removeClass('touch').addClass('notouch');
             app.parallax.init();
         } else {
