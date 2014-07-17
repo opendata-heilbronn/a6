@@ -34,6 +34,10 @@
      aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                    class="sr-only">Close</span></button>
+            <div class="modal-body">
+            </div>
         </div>
     </div>
 </div>
@@ -64,8 +68,8 @@
             </div>
         </div>
         <div class="intro-box">
-            <div class="intro-text">
-                <h1>Die A6</h1>
+            <div class="intro-text" onclick="app.scroll.scrollTo(1);">
+            <h1>Die A6</h1>
 
                 <span>Unfälle, Baustellen, Staus - Eine Analyse</span>
             </div>
@@ -139,10 +143,9 @@
                             2014 zur Verfügung gestellt. </p>
 
                         <p class="p-btn">
-                            <a class="btn btn-warning" data-toggle="modal" data-target="#a6-accident-map"
-                               href="accident-map-modal.html">
-                                Unfallkarte öffnen
-                            </a>
+                            <button class="btn btn-warning btn-toggle-accident-map">
+                            Unfallkarte öffnen
+                            </button>
                         </p>
                     </div>
                 </div>
@@ -160,8 +163,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="card">
-                    <nav class="nav-arrows">
+                <div class="card active">
+                <nav class="nav-arrows">
                         <div class="row">
                             <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6 nav-arrow-prev">
                                 <img src="img/nav_arrows_prev.svg"/>
@@ -277,10 +280,9 @@
                             Fahrbahnverengung viele Auffahrunfälle nach sich.</p>
 
                         <p class="p-btn">
-                            <a class="btn btn-warning" data-toggle="modal" data-target="#a6-accident-map"
-                               href="accident-map-modal.html">
-                                Unfallkarte öffnen
-                            </a>
+                            <button class="btn btn-warning btn-toggle-accident-map">
+                            Unfallkarte öffnen
+                            </button>
                         </p>
                     </div>
                 </div>
@@ -359,10 +361,9 @@
                         </p>
 
                         <p class="p-btn">
-                            <a class="btn btn-warning" data-toggle="modal" data-target="#a6-accident-map"
-                               href="accident-map-modal.html">
-                                Unfallkarte öffnen
-                            </a>
+                            <button class="btn btn-warning btn-toggle-accident-map">
+                            Unfallkarte öffnen
+                            </button>
                         </p>
                     </div>
                 </div>

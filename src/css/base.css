@@ -312,6 +312,8 @@ h2 small {
 
 .cartodbmap {
     height: 420px;
+    width: 100%;
+    border: none;
 }
 
 @media (min-height: 600px) {
