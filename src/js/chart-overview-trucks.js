@@ -137,6 +137,13 @@
                 return d;
             });
 
+        containerGroup.append("text")
+            .attr("x", innerWidth)
+            .attr("y", 56)
+            .style("text-anchor", "end")
+            .style("font-size", "10px")
+            .text("täglich");
+
         var activated = false;
         var onActivation = function () {
             if (activated) {
