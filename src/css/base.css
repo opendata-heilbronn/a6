@@ -346,7 +346,8 @@ h2 small {
     height: 70px;
 }
 
-.nav-arrow-next img {
+.nav-arrow-next img,
+.th-arrow svg {
     animation: inout 4s;
     animation-iteration-count: infinite;
     -webkit-animation: inout 4s;
@@ -361,13 +362,44 @@ h2 small {
     text-align: center;
 }
 
-.th-arrow svg {
-    animation: inout 4s;
+.notouch .th-arrow svg {
+    animation: inout-vert 4s;
     animation-iteration-count: infinite;
-    -webkit-animation: inout 4s;
+    -webkit-animation: inout-vert 4s;
     -webkit-animation-iteration-count: infinite;
+    margin-bottom: 1em;
 }
 
 .th-arrow polyline {
     stroke: #D1A800;
+}
+
+@keyframes inout-vert {
+    0% {
+        transform: translate(0, 0);
+    }
+    80% {
+        transform: translate(0, 0) scale(1, 1);
+    }
+    90% {
+        transform: translate(0, 10%) scale(1.15, 1.15);
+    }
+    100% {
+        transform: translate(0, 0) scale(1, 1);
+    }
+}
+
+@-webkit-keyframes inout-vert {
+    0% {
+        -webkit-transform: translate(0, 0);
+    }
+    80% {
+        -webkit-transform: translate(0, 0) scale(1, 1);
+    }
+    90% {
+        -webkit-transform: translate(0, 10%) scale(1.15, 1.15);
+    }
+    100% {
+        -webkit-transform: translate(0, 0) scale(1, 1);
+    }
 }
