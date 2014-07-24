@@ -356,3 +356,18 @@ h2 small {
 .nav-arrow-next {
     text-align: right;
 }
+
+.th-arrow {
+    text-align: center;
+}
+
+.th-arrow svg {
+    animation: inout 4s;
+    animation-iteration-count: infinite;
+    -webkit-animation: inout 4s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+.th-arrow polyline {
+    stroke: #D1A800;
+}
