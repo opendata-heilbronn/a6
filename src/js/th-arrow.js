@@ -50,7 +50,7 @@
         };
 
         var onResize = function () {
-            var targetWidth = Math.min(Modernizr.touch ? 80 : 200, $container.innerWidth());
+            var targetWidth = Math.min(Modernizr.touch ? 80 : 100, $container.innerWidth());
             svg
                 .attr("width", targetWidth)
                 .attr("height", Math.round(targetWidth / aspect));
