@@ -34,6 +34,10 @@
      aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                    class="sr-only">Close</span></button>
+            <div class="modal-body">
+            </div>
         </div>
     </div>
 </div>
@@ -64,8 +68,8 @@
             </div>
         </div>
         <div class="intro-box">
-            <div class="intro-text">
-                <h1>Die A6</h1>
+            <div class="intro-text" onclick="app.scroll.scrollTo(1);">
+            <h1>Die A6</h1>
 
                 <span>Unfälle, Baustellen, Staus - Eine Analyse</span>
             </div>
@@ -96,7 +100,7 @@
                     <div class="card-content">
                         <blockquote class="blockquote-single">
                             <p>“Die A6 hat eine zentrale Bedeutung als Handelsachse. Die Region um Stuttgart gilt als
-                                eins der Zentren des deutschen Mittelstands.” </p>
+                                eines der Zentren des deutschen Mittelstands.” </p>
                             <footer>Tomás Bayón, Professor für Marketing und Dienstleistungsmanagement, German Graduate
                                 School, Heilbronn
                             </footer>
@@ -105,7 +109,7 @@
                 </div>
                 <div class="card">
                     <div class="card-content">
-                        <p>Diese wirtschaftlichen Bedeutung macht die A6 zu einer der am stärksten frequentierten
+                        <p>Diese wirtschaftliche Bedeutung macht die A6 zu einer der am stärksten frequentierten
                             Autobahnen in Deutschland. Das zeigen die Daten aus den Dauerzählstellen an Autobahnen. Mehr
                             als 96.000 Fahrzeuge passieren täglich die A6-Zählstelle in Neckarsulm. Jedes fünfte
                             Fahrzeug ist ein <strong>Lkw</strong>. Das liegt deutlich über den Durchschnittswerten aller
@@ -127,7 +131,7 @@
                 </div>
                 <div class="card">
                     <div class="card-content">
-                        <p>Wo viele Fahrzeuge verkehren, steigt das <strong>Risiko</strong> für Unfälle. In diesem Jahr
+                        <p>Wo viele Fahrzeuge sind, steigt das <strong>Risiko</strong> für Unfälle. In diesem Jahr
                             gab es bereits
                             viele schwere Verkehrsunfälle auf der A6 - vor allem mit Lkw-Beteiligung.</p>
 
@@ -139,10 +143,9 @@
                             2014 zur Verfügung gestellt. </p>
 
                         <p class="p-btn">
-                            <a class="btn btn-warning" data-toggle="modal" data-target="#a6-accident-map"
-                               href="accident-map-modal.html">
-                                Unfallkarte öffnen
-                            </a>
+                            <button class="btn btn-warning btn-toggle-accident-map">
+                            Unfallkarte öffnen
+                            </button>
                         </p>
                     </div>
                 </div>
@@ -155,22 +158,23 @@
 
                         <p>Wir nehmen diese <strong>fünf Bereiche</strong>
                             genauer unter die Lupe und wählen an jedem einen anderen Fokus: Welche Rolle spielt der
-                            Lkw-Verkehr? Ist der Stau zum Normalzustand geworden? Welche Auswirkungen haben die Unfälle
-                            auf die Umleitungsstrecken?
+                            <strong>Lkw-Verkehr</strong>? Ist der <strong>Stau</strong> zum Normalzustand geworden? Wie
+                            geht es mit der <strong>Neckartalbrücke</strong>
+                            weiter? Welche Rolle spielt das <strong>Verkehrsaufkommen</strong>? Welche Auswirkungen
+                            haben die Unfälle auf
+                            die <strong>Umleitungsstrecken</strong>?
                         </p>
                     </div>
                 </div>
                 <div class="card">
-                    <nav class="nav-arrows">
-                        <div class="row">
-                            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6 nav-arrow-prev">
-                                <img src="img/nav_arrows_prev.svg"/>
-                            </div>
-                            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6 nav-arrow-next">
-                                <img src="img/nav_arrows_next.svg"/>
-                            </div>
-                        </div>
-                    </nav>
+                    <div class="card-content">
+                        <p>
+                            Bei dieser Tour über die A6 möchten wir Ihnen Antworten auf diese Fragen geben und zeigen
+                            Ihnen spannende Zahlen, Grafiken und Hintergründe zur wichtigsten Autobahn der Region.
+                            Kommen Sie mit!</p>
+
+                        <div class="chart th-arrow"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -245,25 +249,19 @@
                             selten der Grund. Nach Angaben der Verkehrspolizei Heilbronn ist der Zustand der
                             sicherheitsrelevanten Teile wie Bremsen, Reifen und Druckluftanlagen bei Lastwagen
                             überwiegend gut. </p>
-
-                        <p>Die Hauptunfallursachen sind nach Polizeiangaben zu geringer
-                            Abstand, eine zu hohe Geschwindigkeit, schlecht gesicherte Ladung und unsicheres
-                            Überholen.</p>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="card-content">
                         <p>Bei 60 Prozent der Lkw-Unfälle auf Autobahnen ist die Ursache laut Statistischem Bundesamt
-                            auf
-                            <strong>Fehlverhalten</strong> der
-                            Fahrzeugführer zurückzuführen. Der häufigste Grund: zu geringer <strong>Abstand</strong>,
-                            gefolgt von nicht
-                            angepasster <strong>Geschwindigkeit</strong>. Immer wieder geraten Lastwagenfahrer deshalb
-                            bei
-                            Unfällen in die Kritik.
-                            Die Autobahnpolizei will in den kommenden Wochen verstärkt den Abstand der Lastwagen
-                            kontrollieren.</p>
+                            auf <strong>Fehlverhalten</strong> der Fahrzeugführer zurückzuführen. Der häufigste Grund:
+                            zu geringer
+                            <strong>Abstand</strong>, gefolgt von nicht angepasster <strong>Geschwindigkeit</strong>.
+                            Immer wieder geraten Lastwagenfahrer
+                            deshalb bei Unfällen in die Kritik. Die Autobahnpolizei will in den kommenden Wochen
+                            verstärkt den Abstand der Lastwagen kontrollieren.
+                        </p>
                     </div>
                 </div>
                 <div class="card">
@@ -277,10 +275,9 @@
                             Fahrbahnverengung viele Auffahrunfälle nach sich.</p>
 
                         <p class="p-btn">
-                            <a class="btn btn-warning" data-toggle="modal" data-target="#a6-accident-map"
-                               href="accident-map-modal.html">
-                                Unfallkarte öffnen
-                            </a>
+                            <button class="btn btn-warning btn-toggle-accident-map">
+                            Unfallkarte öffnen
+                            </button>
                         </p>
                     </div>
                 </div>
@@ -309,7 +306,7 @@
                         </blockquote>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card active">
                     <nav class="nav-arrows">
                         <div class="row">
                             <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6 nav-arrow-prev">
@@ -359,10 +356,9 @@
                         </p>
 
                         <p class="p-btn">
-                            <a class="btn btn-warning" data-toggle="modal" data-target="#a6-accident-map"
-                               href="accident-map-modal.html">
-                                Unfallkarte öffnen
-                            </a>
+                            <button class="btn btn-warning btn-toggle-accident-map">
+                            Unfallkarte öffnen
+                            </button>
                         </p>
                     </div>
                 </div>
@@ -415,7 +411,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card active">
                     <nav class="nav-arrows">
                         <div class="row">
                             <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6 nav-arrow-prev">
@@ -490,7 +486,7 @@
                     <div class="card-content">
                         <p>Besonders an den Anschlussstellen Untereisesheim und Neckarsulm - also vor und nach der
                             Neckartalbrücke - kracht es häufig. Und dort zeigen die Daten auch eine deutliche Zunahme
-                            der Unfälle in der vergangenen Monaten.
+                            der Unfälle in den vergangenen Monaten.
                         </p>
 
                         <div id="chart-neckartalbruecke-accidents" class="chart"></div>
@@ -546,7 +542,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card active">
                     <nav class="nav-arrows">
                         <div class="row">
                             <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6 nav-arrow-prev">
@@ -636,26 +632,18 @@
                 </div>
                 <div class="card">
                     <div class="card-content">
-                        <blockquote class="blockquote-single">
-                            <p>"Problematisch für die Region ist, dass im Gegensatz zu anderen innerdeutschen
-                                West-Ost-Verbindungen wie der A2 und A4 noch keine durchgängig grundlegende <strong>Modernisierung</strong>
-                                der A6 stattgefunden hat, was leider viele Staus nach sich zieht."</p>
-                            <footer>Tomás Bayón, German Graduate School</footer>
-                        </blockquote>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-content">
                         <p>Viel Verkehr, viele Spurwechsel, viele Staus: Diese Faktoren sind ausschlaggebend dafür, dass
+                            es
                             am Weinsberger Kreuz häufig kracht. Allerdings deuten die Unfallzahlen der vergangenen zwei
-                            Jahre für den Bereich Weinsberg nicht auf eine Zunahme der Unfälle hin - Kleinstunfälle
-                            tauchen in dieser Statistik nicht auf. Doch auch diese können den Verkehr lahm legen.
+                            Jahre für den Bereich Weinsberg nicht auf eine Zunahme der Unfälle hin. Die Polizei sagt
+                            aber deutlich: Kleinstunfälle tauchen in keiner Statistik auf. Doch auch diese können den
+                            Verkehr lahm legen und das Weinsberger Kreuz zum kollabieren bringen.
                         </p>
 
                         <div id="chart-weinsberg-accidents" class="chart"></div>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card active">
                     <nav class="nav-arrows">
                         <div class="row">
                             <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6 nav-arrow-prev">
@@ -732,7 +720,7 @@
                 <div class="card">
                     <div class="card-content">
                         <p>
-                            Nach wissenschaftlichen Berechnungen kann eine Spur Autobahn im Schnitt 1800 Fahrzeuge in
+                            Nach wissenschaftlichen Berechnungen kann eine Autobahn-Spur im Schnitt 1800 Fahrzeuge in
                             der Stunde aufnehmen (bei einem Schwerverkehrsanteil von 10 Prozent). Eine normale Straße
                             bewältigt nur 1000 Fahrzeuge in der Stunde.
                             Kein Wunder, dass die Umleitungsstrecken in der Region regelmäßig überlastet sind.
@@ -748,7 +736,7 @@
                             an
                             der Tagesordnung. Blechlawinen quälen sich auch durch Bitzfeld, Schwabbach oder Dimbach,
                             wenn
-                            die A6 mal wieder dicht ist.Deshalb fordern die Bürgermeister dieser Kommunen vehement den
+                            die A6 mal wieder dicht ist. Deshalb fordern die Bürgermeister dieser Kommunen vehement den
                             Ausbau der A6.</p>
 
                         <p>
@@ -770,7 +758,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card active">
                     <nav class="nav-arrows">
                         <div class="row">
                             <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6 nav-arrow-prev">
@@ -800,52 +788,81 @@
                     <div class="card-content">
                         <h3>Fazit: Staus nehmen zu</h3>
 
-                        <p>
-                            Immer mehr Unfälle. Dieses subjektive Empfinden hat die A6-Analyse nicht bestätigt. Eine
-                            Zunahme zeigt sich nur im Bereich der Neckartalbrücke. Im Oktober vergangenen Jahres musste
-                            hier der Verkehr von drei <strong>auf zwei Fahrspuren verengt</strong> werden, um das
-                            Gewicht, das die Brücke
-                            tragen muss, zu verringern. Um Staus vorzubeugen, hat die Polizei die Fahrbahnmarkierungen
-                            kürzlich geändert. Nach Angaben des Regierungspräsidiums Stuttgart zeigt diese Maßnahme
-                            bereits Wirkung. (<em>Sie haben andere Erfahrungen? <a href="mailto:online@stimme.de">Dann
-                            schreiben Sie uns!</a></em>).</p>
+                        <p>Immer mehr Unfälle. Dieses subjektive Empfinden hat die A6-Analyse nicht bestätigt.
+                            Vergleicht man die Daten seit Januar 2010 sind die Unfallzahlen etwa auf gleichbleibendem
+                            Niveau. </p>
+
+                        <blockquote class="blockquote-single">
+                            <p>"Verglichen mit den Vorjahren ist die Situation auf der A6 nicht auffälliger."</p>
+                            <footer>Helmut Wacker, Leiter der Verkehrspolizei in Weinsberg</footer>
+                        </blockquote>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-content">
-                        <blockquote>
-                            <p>"Verglichen mit den Vorjahren ist die Situation auf der A6 nicht auffälliger."</p>
-                            <footer>Helmut Wacker, Leiter der Verkehrspolizei in Weinsberg</footer>
-                        </blockquote>
                         <p>
                             Einzige Ausnahme: In den ersten vier Monaten des Jahres, gab es besonders <strong>viele
                             schwere
                             Lkw-Unfälle</strong> im Gebiet der Polizei Heilbronn – 23 an der Zahl. Im gesamten
                             vergangenen Jahr
-                            waren es 14, 2012 gar nur zehn schwere Lkw-Unfälle.
+                            waren es 14, 2012 gar nur zehn schwere Lkw-Unfälle. Das beschäftigt auch die Polizei, die
+                            mit Abstandsmessungen reagiert.
+                        </p>
+
+                        <p>
+                            <a href="http://www.stimme.de/3145043"
+                               target="_blank">&gt; Geringer Abstand Unfallursache Nummer 1</a>
                         </p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-content">
-                        Wie die Analyse gezeigt hat, ist der Bereich der A6 von Sinsheim bis Öhringen stark frequentiert
-                        und die <strong>Staus nehmen drastisch zu</strong>. Dies liegt vor allem an den zahlreichen
-                        <strong>Fahrbahnverengungen</strong>
-                        an Brücken. Hier passieren häufig <strong>Kleinstunfälle</strong>, die in keiner Statistik
-                        auftauchen. Doch auch
-                        sie können den Verkehr zum Erliegen bringen. Dazu kommt: Der
-                        <strong>Schwerverkehrsanteil</strong> ist auf der A6
-                        überdurchschnittlich hoch, an jedem dritten Unfall ist ein Lkw beteiligt. Die Daten zeigen auch:
-                        Wo Lkw verwickelt sind, sind die Opfer häufiger schwer verletzt.
+                        <p>
+                            Eine leichte Zunahme der Unfallzahlen zeigt sich außerdem im Bereich der Neckartalbrücke. Im
+                            Oktober vergangenen Jahres musste hier der Verkehr von drei <strong>auf zwei Fahrspuren
+                            verengt</strong>
+                            werden, um das Gewicht, das die Brücke tragen muss, zu verringern. Um Staus vorzubeugen, hat
+                            die Polizei die Fahrbahnmarkierungen kürzlich geändert. Nach Angaben des
+                            Regierungspräsidiums Stuttgart zeigt diese Maßnahme bereits Wirkung. (<em>Sie haben andere
+                            Erfahrungen?
+                            <a href="mailto:online@stimme.de">Dann schreiben Sie uns!</a></em>).
+                        </p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-content">
-                        <p>Lkw-Unfälle sind oft folgenschwer: Kilometerlange Staus, aufwendige Bergungen und Teil- oder
-                            Vollsperrungen der Autobahn sind die Folge. Dadurch sind nicht nur die Menschen auf der
-                            Autobahn von den Unfällen betroffen, sondern auch die <strong>umliegenden Kommunen</strong>.
-                            Umleitungsstrecken sind überlastet, der Verkehr kollabiert.
+                        <p>Wie die Analyse gezeigt hat, ist der Bereich der A6 von Sinsheim bis Öhringen stark
+                            frequentiert und die <strong>Staus nehmen drastisch zu</strong>. Dies liegt vor allem an den
+                            zahlreichen
+                            <strong>Fahrbahnverengungen</strong> an Brücken. Hier passieren häufig <strong>Kleinstunfälle</strong>,
+                            die in keiner
+                            Statistik auftauchen. Doch auch sie können den Verkehr zum Erliegen bringen. Dazu kommt: Der
+                            <strong>Schwerverkehrsanteil</strong> ist auf der A6 überdurchschnittlich hoch, an jedem
+                            dritten Unfall ist
+                            ein Lkw beteiligt.
                         </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>A6-Ausbau gefordert</h3>
+
+                        <p>Überproportional oft sind Lastwagen an Unfällen beteiligt. Häufige Unfallursache: <strong>Lkw-Fahrer</strong>,
+                            die zu wenig Abstand halten. Das Feindbild Lkw-Fahrer ist auf der Straße wie in den sozialen
+                            Netzwerken ein oft beobachtbares Phänomen. Oft wird dabei ihre Funktion innerhalb des
+                            Wirtschaftskreislaufes vergessen. Die A6 ist auch deshalb stark befahren, weil die Region
+                            eine
+                            große wirtschaftliche Bedeutung hat.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <blockquote class="blockquote-single">
+                            <p>“Heilbronn-Franken ist die Region der Weltmarktführer und somit stark exportorientiert.
+                                Besonders wichtige Exportländer sind dabei unsere Nachbarn im Westen und Osten.”
+                            </p>
+                            <footer>Tomás Bayón, German Graduate School</footer>
+                        </blockquote>
                     </div>
                 </div>
                 <div class="card">
@@ -871,27 +888,28 @@
                 </div>
                 <div class="card">
                     <div class="card-content">
-                        <p>Überproportional oft sind Lastwagen an Unfällen beteiligt. Häufige Unfallursache: <strong>Lkw-Fahrer</strong>,
-                            die zu wenig Abstand halten. Das Feindbild Lkw-Fahrer ist auf der Straße wie in den sozialen
-                            Netzwerken ein oft beobachtbares Phänomen. Oft wird dabei ihre Funktion innerhalb des
-                            Wirtschaftskreislaufes vergessen. Die A6 ist auch deshalb stark befahren, weil die Region
-                            stark exportorientiert ist.
+                        <p>
+                            Bei Lkw-Unfällen sind die Opfer häufiger schwer verletzt. Aufwendige Bergungen,
+                            kilometerlange Staus und Teil- oder Vollsperrungen der Autobahn sind die Folge. Dadurch sind
+                            nicht nur die Menschen auf der Autobahn von den Unfällen betroffen, sondern auch die
+                            <strong>umliegenden Kommunen</strong>. Umleitungsstrecken sind überlastet, der Verkehr
+                            kollabiert.
                         </p>
-
-                        <blockquote class="blockquote-single">
-                            <p>“Heilbronn-Franken ist die Region der Weltmarktführer und somit stark exportorientiert.
-                                Besonders wichtige Exportländer sind dabei unsere Nachbarn im Westen und Osten.”
-                            </p>
-                            <footer>Tomás Bayón, German Graduate School</footer>
-                        </blockquote>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-content">
+                        <h3>Zahl der Toten rückläufig</h3>
+
                         <p>Auf der baden-württembergischen A6 starben seit 2010 23 Menschen. Davon kamen 17 in dem von
                             uns untersuchten Streckenabschnitt Sinsheim-Öhringen ums Leben. Jeder Tote ist einer zu
-                            viel. Und doch muss man an dieser Stelle auch eine andere Statistik in den Blick nehmen: Die
-                            <strong>Zahl der Getöteten</strong> im Straßenverkehr ist seit Jahrzehnten <strong>rückläufig</strong>.
+                            viel. Und doch muss man an dieser Stelle auch eine andere Statistik in den Blick nehmen.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <p>Die <strong>Zahl der Getöteten</strong> im Straßenverkehr ist seit Jahrzehnten <strong>rückläufig</strong>.
                             Auf eine Million
                             gefahrener Streckenkilometer kommen im Schnitt fünf Tote. Betrachtet man nur die Autobahn,
                             sind es 1,7 Tote. Damit gilt die Autobahn als sicherste Straße in Deutschland. Die A6 ist
@@ -916,12 +934,12 @@
                             Stimme.de informieren die Leser nahezu in Echtzeit über Unfälle, Staus und
                             Straßensperrungen. Über die sozialen Medien erreichen wir dadurch mehr Menschen, als je
                             zuvor. Artikel über Unfälle werden tausendfach geteilt und aufgerufen. Dabei schleicht sich
-                            bei vielen Lesern das Gefühl ein, es gäbe immer mehr schwere Unfälle. Einen solchen Trend
-                            bestätigen die Zahlen nicht.
+                            bei vielen Lesern das Gefühl ein, es gäbe immer mehr schwere Unfälle und immer mehr Tote auf
+                            den Straßen. Einen solchen Trend bestätigen die Zahlen nicht.
                         </p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card active">
                     <nav class="nav-arrows">
                         <div class="row">
                             <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6 nav-arrow-prev">
@@ -1048,6 +1066,7 @@
 <script src="js/app.js"></script>
 <script src="js/scroll.js"></script>
 <script src="js/parallax.js"></script>
+<script src="js/th-arrow.js"></script>
 <script src="js/chart-accidents.js"></script>
 <script src="js/chart-overview-trucks.js"></script>
 <script src="js/chart-sinsheim-accidents.js"></script>

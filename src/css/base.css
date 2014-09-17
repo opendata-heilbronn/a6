@@ -279,7 +279,7 @@ h2 small {
 }
 
 .notouch .pane {
-    height: 2800px;
+    height: 3200px;
 }
 
 .notouch .card-teaser {
@@ -312,6 +312,8 @@ h2 small {
 
 .cartodbmap {
     height: 420px;
+    width: 100%;
+    border: none;
 }
 
 @media (min-height: 600px) {
@@ -353,4 +355,12 @@ h2 small {
 
 .nav-arrow-next {
     text-align: right;
+}
+
+.th-arrow {
+    text-align: center;
+}
+
+.th-arrow polyline {
+    stroke: #D1A800;
 }

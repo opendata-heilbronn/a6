@@ -4,21 +4,21 @@
     var dataSets = {
         'a6': [
             {
-                label: 'PKW',
+                label: 'PKW-Anteil',
                 value: 96827
             },
             {
-                label: 'LKW',
+                label: 'LKW-Anteil',
                 value: 18798
             }
         ],
         'sinsheim': [
             {
-                label: 'PKW',
+                label: 'PKW-Anteil',
                 value: 151
             },
             {
-                label: 'LKW',
+                label: 'LKW-Anteil',
                 value: 107
             }
         ]
@@ -27,11 +27,11 @@
     var containerSelector = '#chart-steinsfurt-truck-accidents';
     var data = [
         {
-            label: 'PKW',
+            label: 'PKW-Anteil',
             value: 50
         },
         {
-            label: 'LKW',
+            label: 'LKW-Anteil',
             value: 50
         }
     ], update = null;

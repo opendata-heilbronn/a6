@@ -3,6 +3,10 @@
     position: relative;
 }
 
+.intro-box {
+    cursor: pointer;
+}
+
 .row-intro-bg {
     height: 50%;
     margin: 0;
