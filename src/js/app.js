@@ -23,9 +23,13 @@ var app = {
     app.init = function () {
         if (!Modernizr.touch) {
             $('#slide-0').height($(window).innerHeight());
-            $('.explain-slide, .intro-box').on('click', function () {
+            var removeTeaser = function () {
                 $('#slide-0').addClass('off');
-            });
+            };
+            $('.explain-slide, .intro-box').on('click', removeTeaser);
+            if (window.location.hash) {
+                removeTeaser();
+            }
             $('html, body, .fullscreen, .fullscreen-content, .pane-scroller, .pane').removeClass('touch').addClass('notouch');
             app.parallax.init();
         } else {
